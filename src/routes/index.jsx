@@ -11,7 +11,7 @@ import Export from "../pages/export";
 import Logistic from "../pages/logistic";
 import Marcet from "../pages/marcet";
 import Halp from "../pages/halp";
-import Settings from "../pages/Settings";
+import Settings from "../pages/settings";
 import Import from "../pages/import";
 
 import PrivateRoute from "../components/private-route";
