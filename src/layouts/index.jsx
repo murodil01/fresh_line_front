@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
-import Sidebar from "../components/sidebar";
+import Sidebar from "../components/sideBar";
 import { Menu } from "lucide-react";
 
 const MainLayout = () => {
