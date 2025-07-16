@@ -28,7 +28,7 @@ const Hero = () => {
           Tizimga kirish
         </button>
 
-        <button className="flex items-center gap-2 font-[700] text-gray-800  text-[20px] px-[11px] py-4 rounded-lg border hover:bg-gray-100 transition">
+        <button className="flex border-none  bg-gray-100 items-center gap-2 font-[700] text-gray-800  text-[20px] px-[11px] py-4 rounded-lg border hover:bg-gray-200 transition">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
