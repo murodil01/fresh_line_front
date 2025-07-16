@@ -35,7 +35,7 @@ export const router = createBrowserRouter([
         path: "/",
         element: <MainLayout />,
         children: [
-          { path: "/home", element: <Home /> },
+          { path: "/dashboard", element: <Home /> },
           { path: "/import", element: <Import /> },
           { path: "/statistic", element: <Statistika /> },
           { path: "/mahsulotlar", element: <Mahsulotlar /> },

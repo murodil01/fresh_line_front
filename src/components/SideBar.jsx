@@ -18,7 +18,7 @@ import { Link, useLocation } from "react-router-dom";
 import logo2 from "../assets/logo2.png";
 
 const menuItems = [
-  { key: "dashboard", icon: <UserPen />, label: "Profile", path: "/" },
+  { key: "dashboard", icon: <UserPen />, label: "Profile", path: "/dashboard" },
   {
     key: "statistic",
     icon: <ChartNoAxesCombined />,
