@@ -19,7 +19,7 @@ const Login = () => {
         toast.success("Welcome");
         let { token } = data;
         localStorage.setItem("token", token);
-        navigate("/")
+        navigate("/home")
       })
       .catch(() => {
         toast.error("Login or password error");

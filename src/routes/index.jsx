@@ -15,8 +15,19 @@ import Settings from "../pages/settings";
 import Import from "../pages/import";
 
 import PrivateRoute from "../components/private-route";
+import HomeComponent from "../components/home";
 
 export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomeComponent />,
+  },
+
+  {
+    path: "/login",
+    element: <Login />,
+  },
+
   {
     element: <PrivateRoute />,
     children: [
@@ -24,7 +35,7 @@ export const router = createBrowserRouter([
         path: "/",
         element: <MainLayout />,
         children: [
-          { path: "/", element: <Home /> },
+          { path: "/home", element: <Home /> },
           { path: "/import", element: <Import /> },
           { path: "/statistic", element: <Statistika /> },
           { path: "/mahsulotlar", element: <Mahsulotlar /> },
@@ -36,9 +47,5 @@ export const router = createBrowserRouter([
         ],
       },
     ],
-  },
-  {
-    path: "/login",
-    element: <Login />,
   },
 ]);

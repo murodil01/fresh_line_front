@@ -1,46 +1,173 @@
-import {
-  HomeOutlined,
-  UsergroupAddOutlined,
-  BookOutlined,
-  TeamOutlined,
-  PieChartOutlined,
-} from "@ant-design/icons";
+import { Phone, User, Loader } from "lucide-react";
 import Navbar from "../../components/navbar";
+import React, { useEffect, useState } from "react";
+import Footer from "../../components/footer";
+import { usaAxios } from "../../hooks/useAxios";
 
 const Home = () => {
-  const cards = [
-    { icon: <UsergroupAddOutlined />, title: "Farmers", value: 245 },
-    { icon: <TeamOutlined />, title: "Exportyor", value: 18 },
-    { icon: <BookOutlined />, title: "Mahsulotlar", value: 12 },
-    { icon: <PieChartOutlined />, title: "Yangi qo'shilganlar", value: 34 },
-    { icon: <PieChartOutlined />, title: "Faol foydalanuvchilar", value: 127 },
-    { icon: <PieChartOutlined />, title: "Bugungi kirishlar", value: 58 },
-  ];
+  const [activeTab, setActiveTab] = useState("mahsulotlar");
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const axios = usaAxios();
+
+  const [currentDateTime, setCurrentDateTime] = useState(new Date());
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentDateTime(new Date());
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+  const formatDateTime = (date) => {
+    const day = String(date.getDate()).padStart(2, "0");
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const year = date.getFullYear();
+    const hours = String(date.getHours()).padStart(2, "0");
+    const minutes = String(date.getMinutes()).padStart(2, "0");
+    const seconds = String(date.getSeconds()).padStart(2, "0");
+    return `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
+  };
+
+  useEffect(() => {
+    if (activeTab === "mahsulotlar") {
+      setLoading(true);
+      axios({ url: "api/products/", method: "GET" })
+        .then((res) => {
+          setProducts(res.data); 
+        })
+        .catch((err) => {
+          console.error("Xatolik:", err);
+        })
+        .finally(() => setLoading(false));
+    }
+  }, [activeTab]);
+
+  const renderContent = () => {
+    switch (activeTab) {
+      case "mahsulotlar":
+        return (
+          <div className="p-4 bg-gray-100 min-h-[200px]">
+            {loading ? (
+              <div className="flex justify-center items-center h-[150px]">
+                <Loader className="animate-spin text-[#46A358] w-8 h-8" />
+              </div>
+            ) : products.length === 0 ? (
+              <div className="text-center text-red-500 font-medium py-8">
+                ❌ Mahsulotlar topilmadi!
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                {products.map((product) => (
+                  <div
+                    key={product.id}
+                    className="bg-white p-4 rounded shadow hover:shadow-md transition"
+                  >
+                    <img
+                      src={
+                        product.image !== "string"
+                          ? product.image
+                          : "https://via.placeholder.com/150"
+                      }
+                      alt={product.name}
+                      className="w-full h-[150px] object-cover rounded"
+                    />
+                    <h2 className="text-lg font-semibold mt-2">
+                      {product.name}
+                    </h2>
+                    <p className="text-gray-500 text-sm mt-1">
+                      {product.description}
+                    </p>
+                    <p className="text-green-600 font-bold mt-2">
+                      ${product.price}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        );
+      case "ariza":
+        return (
+          <div className="p-4 bg-gray-100">📝 Ariza to'ldirish bo'limi</div>
+        );
+      case "sharxlar":
+        return (
+          <div className="p-4 bg-gray-100">💬 Foydalanuvchi sharxlari</div>
+        );
+      case "pro":
+        return <div className="p-4 bg-gray-100">🚀 Pro versiyasi haqida</div>;
+      default:
+        return null;
+    }
+  };
 
   return (
-    <div className="flex-1 text-[#00AE4B] bg-white p-6 min-h-screen">
+    <div className="flex-1 text-[#00AE4B] bg-white py-6 min-h-screen">
       <Navbar />
-      <h1 className="text-3xl font-bold pb-4 flex items-center gap-2 text-[#00AE4B]">
-        <HomeOutlined />
-        Profile
-      </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-        {cards.map((card, index) => (
-          <div
-            key={index}
-            className="bg-[#F9F9F9] p-6 rounded-2xl shadow hover:shadow-lg transition-all duration-300 border border-[#00AE4B]"
-          >
-            <div className="text-3xl text-[#00AE4B]">{card.icon}</div>
-            <h2 className="text-xl font-semibold mt-2 text-[#00AE4B]">
-              {card.title}
-            </h2>
-            <p className="text-3xl font-bold mt-1 text-gray-600">
-              {card.value}
-            </p>
+      <div>
+        <div
+          className="w-full h-[150px] rounded-t-lg"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, #add8e6, #90ee90, #fffdd0, #ffb6c1)",
+          }}
+        ></div>
+        <div className="flex items-center gap-8 px-8 pt-16 pb-8 bg-white shadow rounded-b-lg relative">
+          <div className="absolute inset-y-0 left-8 z-10 flex items-start">
+            <div className="bg-blue-100 p-2 rounded-lg border-4 border-white shadow">
+              <img
+                src="https://cdn1.iconfinder.com/data/icons/bokbokstars-121-classic-stock-icons-1/512/person-man.png"
+                alt="avatar"
+                className="w-[120px] h-[155px] -mt-15"
+              />
+            </div>
           </div>
-        ))}
+          <p className="pl-40 text-gray-500">
+            {formatDateTime(currentDateTime)}
+          </p>
+        </div>
       </div>
+
+      <div className="mt-5 flex gap-4">
+        <div className="shadow px-4 py-5 flex flex-col gap-2 w-[250px] h-auto rounded-lg text-gray-500">
+          <h3 className="text-[17px]">Ma'lumot</h3>
+          <p className="flex items-center gap-2 text-[15px]">
+            <User className="text-[15px]" /> Ism
+          </p>
+          <p className="flex items-center gap-2 text-[15px]">
+            <User className="text-[15px]" /> Familiya
+          </p>
+          <h3 className="text-[17px] mt-2"> Aloqa</h3>
+          <p className="flex items-center gap-2 text-[15px]">
+            <Phone className="text-[15px]" /> Telefon
+          </p>
+        </div>
+
+        <div className="w-full">
+          <nav>
+            <ul className="flex items-center justify-between p-4 bg-white shadow rounded-t-lg">
+              {["mahsulotlar", "ariza", "sharxlar", "pro"].map((tab) => (
+                <li
+                  key={tab}
+                  onClick={() => setActiveTab(tab)}
+                  className={`cursor-pointer px-4 py-2 rounded transition-all duration-200
+                    ${
+                      activeTab === tab
+                        ? "bg-[#46A358] text-white font-[500]"
+                        : "text-gray-700 hover:bg-green-300 hover:text-white"
+                    }`}
+                >
+                  {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          {renderContent()}
+        </div>
+      </div>
+
+      <Footer />
     </div>
   );
 };
