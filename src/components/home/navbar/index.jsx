@@ -27,7 +27,7 @@ const Navbar = () => {
           </a>
           <button
             onClick={handleLoginClick}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm transition"
+            className="bg-[#46A358] hover:bg-[#4b8657] text-white px-4 py-2 rounded-lg text-sm transition"
           >
             Tizimga kirish
           </button>

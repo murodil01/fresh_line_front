@@ -4,7 +4,6 @@ import Footer from "./footer";
 import Hero from "./hero";
 import Navbar from "./navbar";
 import Platform from "./platform";
-import Question from "./question";
 import System from "./system";
 import YouTube from "./youtube";
 
@@ -18,7 +17,6 @@ const HomeComponent = () => {
       <Drivers />
       <Platform />
       <System />
-      <Question />
       <Footer />
     </div>
   );

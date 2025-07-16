@@ -58,10 +58,10 @@ const Drivers = () => {
       </div>
 
       <div className="flex justify-center flex-wrap gap-4 mt-12">
-        <button className="bg-[#3182F6] hover:bg-[#2563eb] text-white font-semibold px-6 py-2 rounded-full transition">
+        <button className="bg-[#46A358] hover:bg-[#4b8657] text-white font-semibold px-[60px] py-2 rounded-lg transition">
           Tizimga kirish
         </button>
-        <button className="flex items-center gap-2 bg-white text-black font-semibold px-6 py-2 rounded-full shadow hover:bg-gray-100 transition">
+        <button className="flex items-center gap-2 bg-white text-black font-semibold px-6 py-2 rounded-lg shadow hover:bg-gray-100 transition">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="w-5 h-5"

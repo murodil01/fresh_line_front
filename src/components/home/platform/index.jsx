@@ -8,21 +8,34 @@ const Platform = () => {
           <Col xs={24} md={12}>
             <h5 className="info-section-title">Dispetcherlar uchun</h5>
             <p className="info-section-text">
-              Yuk tashishni markazlashtirilgan boshqarish: Dispetcherlarga yuklar,
-              haydovchilar va transport vositalarining yagona ma’lumotlar bazasidan
-              foydalanish imkoniyati beriladi, bu ularga buyurtmalarni samarali
-              taqsimlash va real vaqt rejimida tashishni kuzatish imkonini beradi.
-              <br /><br />
-              Marshrutni avtomatlashtirish: platforma tirbandlik va boshqa yo‘l
-              sharoitlarini hisobga olgan holda yuk va mavjud transport vositalarining
-              joylashuvini tahlil qilish asosida avtomatik ravishda optimal
-              marshrutlarni taklif qilishi mumkin.
-              <br /><br />
-              Hujjatlar aylanishini soddalashtirish: schyot-fakturalar va bajarilgan ish
-              sertifikatlari kabi hujjatlarni qayta ishlash jarayonlarini avtomatlashtirish
-              byurokratik tartib-qoidalar uchun vaqtni qisqartiradi.
+              Yuk tashishni markazlashtirilgan boshqarish: Dispetcherlarga
+              yuklar, haydovchilar va transport vositalarining yagona
+              ma'lumotlar bazasidan foydalanish imkoniyati beriladi, bu ularga
+              buyurtmalarni samarali taqsimlash va real vaqt rejimida tashishni
+              kuzatish imkonini beradi.
+              <br />
+              <br />
+              Marshrutni avtomatlashtirish: platforma tirbandlik va boshqa yo'l
+              sharoitlarini hisobga olgan holda yuk va mavjud transport
+              vositalarining joylashuvini tahlil qilish asosida avtomatik
+              ravishda optimal marshrutlarni taklif qilishi mumkin.
+              <br />
+              <br />
+              Hujjatlar aylanishini soddalashtirish: schyot-fakturalar va
+              bajarilgan ish sertifikatlari kabi hujjatlarni qayta ishlash
+              jarayonlarini avtomatlashtirish byurokratik tartib-qoidalar uchun
+              vaqtni qisqartiradi.
             </p>
-            <Button type="primary">Tizimga kirish</Button>
+            <Button
+              style={{
+                background: "#46A358",
+                color: "white",
+                padding: "20px 25px",
+                border: "none",
+              }}
+            >
+              Tizimga kirish
+            </Button>
           </Col>
           <Col xs={24} md={12}>
             <img
@@ -41,18 +54,29 @@ const Platform = () => {
             <h5 className="info-section-title">Yuk egalari uchun</h5>
             <p className="info-section-text">
               Avtotransport vositalariga keng kirish: Yuk egalari tezda o'z
-              ehtiyojlari uchun mos transport vositalarini topish, tashish shartlari
-              va xarajatlarini solishtirish imkoniyatiga ega.
-              <br /><br />
+              ehtiyojlari uchun mos transport vositalarini topish, tashish
+              shartlari va xarajatlarini solishtirish imkoniyatiga ega.
+              <br />
+              <br />
               Shaffoflik va nazorat: real vaqt rejimida yuk harakatini kuzatish,
               yetkazib berish holati haqida bildirishnomalarni olish va tashish
               tarixiga kirish imkoniyati.
-              <br /><br />
-              Soddalashtirilgan logistika: Barcha operatsiyalar uchun bitta platforma
-              bir nechta vositachilar bilan o'zaro aloqaga bo'lgan ehtiyojni
-              kamaytiradi va xatolar xavfini kamaytiradi.
+              <br />
+              <br />
+              Soddalashtirilgan logistika: Barcha operatsiyalar uchun bitta
+              platforma bir nechta vositachilar bilan o'zaro aloqaga bo'lgan
+              ehtiyojni kamaytiradi va xatolar xavfini kamaytiradi.
             </p>
-            <Button type="primary">Tizimga kirish</Button>
+            <Button
+              style={{
+                background: "#46A358",
+                color: "white",
+                padding: "20px 25px",
+                border: "none",
+              }}
+            >
+              Tizimga kirish
+            </Button>
           </Col>
           <Col xs={24} md={12} order={1} mdOrder={2}>
             <img
@@ -71,17 +95,29 @@ const Platform = () => {
             <h5 className="info-section-title">Mashina egalari uchun</h5>
             <p className="info-section-text">
               Yukni maksimallashtirish: platforma transport vositalari egalariga
-              tashish uchun yuklarni topishga yordam beradi, ishlamay qolish vaqtini
-              kamaytiradi va daromadni oshiradi.
-              <br /><br />
+              tashish uchun yuklarni topishga yordam beradi, ishlamay qolish
+              vaqtini kamaytiradi va daromadni oshiradi.
+              <br />
+              <br />
               Filoni boshqarish: Avtomobil sog'lig'ini kuzatish, texnik xizmat
-              ko'rsatishni rejalashtirish va avtomobil samaradorligini tahlil qilish.
-              <br /><br />
-              Moliyaviy hisobot va tahlil: daromadlar va xarajatlarning avtomatlashtirilgan
-              hisobi, har bir transport vositasining samaradorligi va rentabelligi
-              bo‘yicha tahlillar.
+              ko'rsatishni rejalashtirish va avtomobil samaradorligini tahlil
+              qilish.
+              <br />
+              <br />
+              Moliyaviy hisobot va tahlil: daromadlar va xarajatlarning
+              avtomatlashtirilgan hisobi, har bir transport vositasining
+              samaradorligi va rentabelligi bo‘yicha tahlillar.
             </p>
-            <Button type="primary">Tizimga kirish</Button>
+            <Button
+              style={{
+                background: "#46A358",
+                color: "white",
+                padding: "20px 25px",
+                border: "none",
+              }}
+            >
+              Tizimga kirish
+            </Button>
           </Col>
           <Col xs={24} md={12}>
             <img
@@ -99,17 +135,29 @@ const Platform = () => {
           <Col xs={24} md={12} order={2} mdOrder={1}>
             <h5 className="info-section-title">Haydovchilar uchun</h5>
             <p className="info-section-text">
-              Yuk yuklarini qidirish: Haydovchilar joylashuvi va transport vositasi
-              turiga mos keladigan yuk buyurtmalarini osongina topishlari mumkin.
-              <br /><br />
-              Bir zumda yukni bron qilish va tasdiqlash: Buyurtmalarni qabul qilish
-              jarayonini soddalashtiradi, ishlamay qolish vaqtini kamaytiradi.
-              <br /><br />
-              Navigatsiya va marshrutni optimallashtirish: platforma drayverlarga
-              optimallashtirilgan marshrutlarga kirish imkonini beradi, bu esa vaqt
-              va yoqilg‘ini tejashga yordam beradi.
+              Yuk yuklarini qidirish: Haydovchilar joylashuvi va transport
+              vositasi turiga mos keladigan yuk buyurtmalarini osongina
+              topishlari mumkin.
+              <br />
+              <br />
+              Bir zumda yukni bron qilish va tasdiqlash: Buyurtmalarni qabul
+              qilish jarayonini soddalashtiradi, ishlamay qolish vaqtini
+              kamaytiradi.
+              <br />
+              <br />
+              Navigatsiya va marshrutni optimallashtirish: platforma
+              drayverlarga optimallashtirilgan marshrutlarga kirish imkonini
+              beradi, bu esa vaqt va yoqilg'ini tejashga yordam beradi.
             </p>
-            <Button type="primary" icon={<i className="fa-brands fa-apple" />}>
+            <Button
+              style={{
+                background: "#46A358",
+                color: "white",
+                padding: "20px",
+                border: "none",
+              }}
+              icon={<i className="fa-brands fa-apple" />}
+            >
               Haydovchilar uchun
             </Button>
           </Col>

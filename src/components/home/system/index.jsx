@@ -97,10 +97,10 @@ const System = () => {
         </div>
 
         <div className="mt-12 flex flex-wrap justify-center gap-4">
-          <button className="bg-[#2D89FF] text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition text-lg">
+          <button className="bg-[#46A358] text-white px-[52.5px] py-3 rounded-lg hover:bg-[#3d8b4d] transition text-lg">
             Tizimga kirish
           </button>
-          <button className="bg-gray-950 text-white px-6 py-3 rounded-lg flex items-center gap-2 hover:bg-gray-800 transition text-lg">
+          <button className="bg-gray-500 text-white px-6 py-3 rounded-lg flex items-center gap-2 hover:bg-gray-800 transition text-lg">
             <i className="fa-brands fa-apple text-xl"></i>
             <span>Haydovchilar uchun</span>
           </button>

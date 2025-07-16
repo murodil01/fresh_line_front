@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <div className="py-12 px-4 max-w-7xl mx-auto text-center">
+    <div className="py-30 px-4 max-w-7xl mx-auto text-center">
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
         Dispatcherlar
         <span className="animate-pulse text-blue-600">_</span>
@@ -13,11 +13,11 @@ const Hero = () => {
       </p>
 
       <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-8">
-        <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition">
+        <button className="bg-[#46A358] hover:bg-[#4b8657] text-white px-[66.5px] py-2 rounded-lg transition">
           Tizimga kirish
         </button>
 
-        <button className="flex items-center gap-2 text-gray-800 px-6 py-2 rounded-lg border hover:bg-gray-100 transition">
+        <button className="flex items-center gap-2 text-gray-800 px-4 py-2 rounded-lg border hover:bg-gray-100 transition">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
