@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import logom from "../../../assets/logom.png";
 import { Phone, Menu, X } from "lucide-react";
@@ -6,14 +6,28 @@ import { Phone, Menu, X } from "lucide-react";
 const Navbar = () => {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const handleLoginClick = () => {
     navigate("/login");
-    setMenuOpen(false); 
+    setMenuOpen(false);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="shadow-md bg-white sticky top-0 z-50">
+    <header
+      className={`sticky top-0 z-50 bg-white transition-shadow duration-300 ${
+        scrolled ? "shadow-md border-b border-gray-200" : ""
+      }`}
+    >
       <div className="w-[90%] mx-auto flex items-center justify-between py-4">
         <img src={logom} alt="Logo" className="w-32 md:w-40 ml-[-10px]" />
 

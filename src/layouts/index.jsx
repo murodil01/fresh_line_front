@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import Sidebar from "../components/SideBar.jsx";
 import { Menu } from "lucide-react";
@@ -6,40 +6,46 @@ import { Menu } from "lucide-react";
 const MainLayout = () => {
   const navigate = useNavigate();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
 
   const handleLogout = () => {
     localStorage.removeItem("token");
     navigate("/login");
   };
 
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div className="flex flex-col md:flex-row min-h-screen bg-white">
-
-      <div className="md:hidden flex items-center justify-between p-4 bg-[#292524] shadow">
-        <button onClick={toggleSidebar}>
-          <Menu className="w-6 h-6 text-white" />
-        </button>
-        <button
-          onClick={handleLogout}
-          className="text-sm bg-red-600 px-3 py-1 rounded hover:bg-red-700"
-        >
-          Logout
-        </button>
-      </div>
-
       <div
-        className={`fixed z-50 md:static transition-transform duration-300 ${
-          isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-        } md:translate-x-0 md:w-64 w-64 bg-[#292524]`}
+        className={`md:hidden fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
+          isScrolled ? "bg-white shadow-md" : "bg-transparent"
+        } text-black flex items-center justify-between p-4`}
       >
-        <Sidebar onLogout={handleLogout} />
+        <button onClick={toggleSidebar}>
+          <Menu className="w-6 h-6 text-[#46A358]" />
+        </button>
       </div>
 
-      <main className="flex-1 p-6 mt-16 md:mt-0">
+      <div className="md:w-64">
+        <Sidebar
+          onLogout={handleLogout}
+          isMobileOpen={isSidebarOpen}
+          setIsMobileOpen={setIsSidebarOpen}
+        />
+      </div>
+
+      <main className="flex-1 p-6 pt-20 md:pt-6">
         <Outlet />
       </main>
     </div>

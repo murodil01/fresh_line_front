@@ -1,5 +1,4 @@
 import { createBrowserRouter } from "react-router-dom";
-
 import MainLayout from "../layouts/index";
 
 import Home from "../pages/home";
@@ -16,6 +15,8 @@ import Import from "../pages/import";
 
 import PrivateRoute from "../components/private-route";
 import HomeComponent from "../components/home";
+import Error from "../pages/error";
+import PrivateError from "../pages/private-error";
 
 export const router = createBrowserRouter([
   {
@@ -44,8 +45,14 @@ export const router = createBrowserRouter([
           { path: "/marcet", element: <Marcet /> },
           { path: "/halp", element: <Halp /> },
           { path: "/settings", element: <Settings /> },
+          {path: "*", element: <PrivateError/>}
         ],
       },
     ],
+  },
+
+  {
+    path: "*",
+    element: <Error />,
   },
 ]);

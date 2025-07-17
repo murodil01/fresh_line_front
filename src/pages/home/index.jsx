@@ -9,14 +9,15 @@ const Home = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   const axios = usaAxios();
-
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentDateTime(new Date());
     }, 1000);
     return () => clearInterval(interval);
   }, []);
+
   const formatDateTime = (date) => {
     const day = String(date.getDate()).padStart(2, "0");
     const month = String(date.getMonth() + 1).padStart(2, "0");
@@ -32,7 +33,7 @@ const Home = () => {
       setLoading(true);
       axios({ url: "api/products/", method: "GET" })
         .then((res) => {
-          setProducts(res.data); 
+          setProducts(res.data);
         })
         .catch((err) => {
           console.error("Xatolik:", err);
@@ -55,7 +56,7 @@ const Home = () => {
                 ❌ Mahsulotlar topilmadi!
               </div>
             ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {products.map((product) => (
                   <div
                     key={product.id}
@@ -112,32 +113,32 @@ const Home = () => {
               "linear-gradient(to right, #add8e6, #90ee90, #fffdd0, #ffb6c1)",
           }}
         ></div>
-        <div className="flex items-center gap-8 px-8 pt-16 pb-8 bg-white shadow rounded-b-lg relative">
-          <div className="absolute inset-y-0 left-8 z-10 flex items-start">
+        <div className="flex flex-col sm:flex-row items-start gap-4 px-4 sm:px-8 pt-16 pb-8 bg-white shadow rounded-b-lg relative">
+          <div className="flex-shrink-0 sm:absolute sm:left-8 sm:top-[-50px] z-10">
             <div className="bg-blue-100 p-2 rounded-lg border-4 border-white shadow">
               <img
                 src="https://cdn1.iconfinder.com/data/icons/bokbokstars-121-classic-stock-icons-1/512/person-man.png"
                 alt="avatar"
-                className="w-[120px] h-[155px] -mt-15"
+                className="w-[100px] h-[120px] sm:w-[120px] sm:h-[155px] object-cover"
               />
             </div>
           </div>
-          <p className="pl-40 text-gray-500">
+          <p className="pl-0 sm:pl-40 text-gray-500">
             {formatDateTime(currentDateTime)}
           </p>
         </div>
       </div>
 
-      <div className="mt-5 flex gap-4">
-        <div className="shadow px-4 py-5 flex flex-col gap-2 w-[250px] h-auto rounded-lg text-gray-500">
-          <h3 className="text-[17px]">Ma'lumot</h3>
+      <div className="mt-5 flex flex-col lg:flex-row gap-4">
+        <div className="shadow px-4 py-5 flex flex-col gap-2 w-full sm:w-[250px] rounded-lg text-gray-500 bg-white">
+          <h3 className="text-[17px] font-semibold">Ma'lumot</h3>
           <p className="flex items-center gap-2 text-[15px]">
             <User className="text-[15px]" /> Ism
           </p>
           <p className="flex items-center gap-2 text-[15px]">
             <User className="text-[15px]" /> Familiya
           </p>
-          <h3 className="text-[17px] mt-2"> Aloqa</h3>
+          <h3 className="text-[17px] mt-4 font-semibold">Aloqa</h3>
           <p className="flex items-center gap-2 text-[15px]">
             <Phone className="text-[15px]" /> Telefon
           </p>
@@ -145,12 +146,12 @@ const Home = () => {
 
         <div className="w-full">
           <nav>
-            <ul className="flex items-center justify-between p-4 bg-white shadow rounded-t-lg">
+            <ul className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between p-4 bg-white shadow rounded-t-lg gap-2 sm:gap-0">
               {["mahsulotlar", "ariza", "sharxlar", "pro"].map((tab) => (
                 <li
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`cursor-pointer px-4 py-2 rounded transition-all duration-200
+                  className={`cursor-pointer px-4 py-2 rounded text-center transition-all duration-200
                     ${
                       activeTab === tab
                         ? "bg-[#46A358] text-white font-[500]"
