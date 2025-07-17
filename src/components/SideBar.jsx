@@ -150,3 +150,5 @@ const SideBar = ({ onLogout, isMobileOpen, setIsMobileOpen }) => {
 
 export default SideBar;
 
+
+

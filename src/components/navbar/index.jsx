@@ -1,5 +1,5 @@
 import { Sun, Bell, UserRoundPen, X } from "lucide-react";
-import React, { useState } from "react";
+import { useState } from "react";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -55,3 +55,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

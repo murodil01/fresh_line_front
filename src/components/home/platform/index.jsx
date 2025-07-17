@@ -1,176 +1,111 @@
 import { Row, Col, Button } from "antd";
 
+const sections = [
+  {
+    title: "Dispetcherlar uchun",
+    content: `
+      Yuk tashishni markazlashtirilgan boshqarish: Dispetcherlarga yuklar, haydovchilar va transport vositalarining yagona ma'lumotlar bazasidan foydalanish imkoniyati beriladi.
+      
+      Marshrutni avtomatlashtirish: platforma tirbandlik va boshqa yo'l sharoitlarini hisobga olgan holda avtomatik optimal marshrutlarni taklif qiladi.
+      
+      Hujjatlar aylanishini soddalashtirish: hujjatlarni avtomatlashtirish byurokratik tartib-qoidalarni soddalashtiradi.
+    `,
+    image:
+      "https://i.pinimg.com/originals/6b/6b/72/6b6b7278581a2aa24948a3c6584e2fe0.jpg",
+    button: "Tizimga kirish",
+  },
+  {
+    title: "Yuk egalari uchun",
+    content: `
+      Avtotransport vositalariga keng kirish: mos transport vositalarini topish, shartlarni solishtirish imkoniyati.
+      
+      Shaffoflik va nazorat: real vaqt rejimida kuzatish, bildirishnomalar va tarixga kirish.
+      
+      Soddalashtirilgan logistika: bitta platforma orqali vositachilar ehtiyoji kamayadi.
+    `,
+    image:
+      "https://i.pinimg.com/originals/6b/6b/72/6b6b7278581a2aa24948a3c6584e2fe0.jpg",
+    button: "Tizimga kirish",
+  },
+  {
+    title: "Mashina egalari uchun",
+    content: `
+      Yukni maksimallashtirish: transport egalariga yuk topishga yordam beradi, ishlamay qolish vaqtini kamaytiradi.
+      
+      Filoni boshqarish: texnik xizmatlarni rejalashtirish, samaradorlik tahlili.
+      
+      Moliyaviy hisobot: avtomatlashtirilgan hisobotlar, daromad va xarajat nazorati.
+    `,
+    image:
+      "https://i.pinimg.com/originals/6b/6b/72/6b6b7278581a2aa24948a3c6584e2fe0.jpg",
+    button: "Tizimga kirish",
+  },
+  {
+    title: "Haydovchilar uchun",
+    content: `
+      Yuk yuklarini qidirish: joylashuv va vosita turiga mos buyurtmalar.
+      
+      Bir zumda yukni bron qilish: ishlamay qolish vaqtini kamaytiradi.
+      
+      Navigatsiya: optimallashtirilgan marshrutlar bilan vaqt va yoqilg'i tejaladi.
+    `,
+    image:
+      "https://i.pinimg.com/originals/6b/6b/72/6b6b7278581a2aa24948a3c6584e2fe0.jpg",
+    button: "Haydovchilar uchun",
+  },
+];
+
 const Platform = () => {
   return (
-    <div className="w-[90%] max-w-[1372px] mx-auto py-10">
-      <section className="info-section">
-        <Row gutter={[32, 32]} align="middle">
-          <Col xs={24} md={12}>
-            <h5 className="info-section-title">Dispetcherlar uchun</h5>
-            <p className="info-section-text">
-              Yuk tashishni markazlashtirilgan boshqarish: Dispetcherlarga
-              yuklar, haydovchilar va transport vositalarining yagona
-              ma'lumotlar bazasidan foydalanish imkoniyati beriladi, bu ularga
-              buyurtmalarni samarali taqsimlash va real vaqt rejimida tashishni
-              kuzatish imkonini beradi.
-              <br />
-              <br />
-              Marshrutni avtomatlashtirish: platforma tirbandlik va boshqa yo'l
-              sharoitlarini hisobga olgan holda yuk va mavjud transport
-              vositalarining joylashuvini tahlil qilish asosida avtomatik
-              ravishda optimal marshrutlarni taklif qilishi mumkin.
-              <br />
-              <br />
-              Hujjatlar aylanishini soddalashtirish: schyot-fakturalar va
-              bajarilgan ish sertifikatlari kabi hujjatlarni qayta ishlash
-              jarayonlarini avtomatlashtirish byurokratik tartib-qoidalar uchun
-              vaqtni qisqartiradi.
-            </p>
-            <Button
-              style={{
-                background: "#46A358",
-                color: "white",
-                padding: "20px 25px",
-                border: "none",
-              }}
-            >
-              Tizimga kirish
-            </Button>
-          </Col>
-          <Col xs={24} md={12}>
-            <img
-              src="https://i.pinimg.com/originals/6b/6b/72/6b6b7278581a2aa24948a3c6584e2fe0.jpg"
-              className="info-section-img"
-              alt="Dispetcher"
-              style={{ width: "100%", borderRadius: 10 }}
-            />
-          </Col>
-        </Row>
-      </section>
+    <div className="w-[90%] max-w-[1372px] mx-auto py-10 space-y-24">
+      {sections.map((section, index) => {
+        const isEven = index % 2 === 0;
 
-      <section className="info-section mt-16">
-        <Row gutter={[32, 32]} align="middle" justify="space-between">
-          <Col xs={24} md={12} order={2} mdOrder={1}>
-            <h5 className="info-section-title">Yuk egalari uchun</h5>
-            <p className="info-section-text">
-              Avtotransport vositalariga keng kirish: Yuk egalari tezda o'z
-              ehtiyojlari uchun mos transport vositalarini topish, tashish
-              shartlari va xarajatlarini solishtirish imkoniyatiga ega.
-              <br />
-              <br />
-              Shaffoflik va nazorat: real vaqt rejimida yuk harakatini kuzatish,
-              yetkazib berish holati haqida bildirishnomalarni olish va tashish
-              tarixiga kirish imkoniyati.
-              <br />
-              <br />
-              Soddalashtirilgan logistika: Barcha operatsiyalar uchun bitta
-              platforma bir nechta vositachilar bilan o'zaro aloqaga bo'lgan
-              ehtiyojni kamaytiradi va xatolar xavfini kamaytiradi.
-            </p>
-            <Button
-              style={{
-                background: "#46A358",
-                color: "white",
-                padding: "20px 25px",
-                border: "none",
-              }}
-            >
-              Tizimga kirish
-            </Button>
-          </Col>
-          <Col xs={24} md={12} order={1} mdOrder={2}>
-            <img
-              src="https://i.pinimg.com/originals/6b/6b/72/6b6b7278581a2aa24948a3c6584e2fe0.jpg"
-              className="info-section-img"
-              alt="Yuk egalari"
-              style={{ width: "100%", borderRadius: 10 }}
-            />
-          </Col>
-        </Row>
-      </section>
+        return (
+          <section className="info-section" key={index}>
+            <Row gutter={[32, 32]} align="middle" justify="space-between">
+              {/* Text */}
+              <Col
+                xs={{ span: 24, order: 2 }}
+                md={{ span: 12, order: isEven ? 1 : 2 }}
+              >
+                <h5 className="info-section-title text-2xl font-bold mb-4">
+                  {section.title}
+                </h5>
+                <p className="info-section-text whitespace-pre-line text-gray-700 mb-4">
+                  {section.content.trim()}
+                </p>
+                <Button
+                  style={{
+                    background: "#46A358",
+                    color: "white",
+                    padding: "16px 24px",
+                    border: "none",
+                  }}
+                >
+                  {section.button}
+                </Button>
+              </Col>
 
-      <section className="info-section mt-16">
-        <Row gutter={[32, 32]} align="middle">
-          <Col xs={24} md={12}>
-            <h5 className="info-section-title">Mashina egalari uchun</h5>
-            <p className="info-section-text">
-              Yukni maksimallashtirish: platforma transport vositalari egalariga
-              tashish uchun yuklarni topishga yordam beradi, ishlamay qolish
-              vaqtini kamaytiradi va daromadni oshiradi.
-              <br />
-              <br />
-              Filoni boshqarish: Avtomobil sog'lig'ini kuzatish, texnik xizmat
-              ko'rsatishni rejalashtirish va avtomobil samaradorligini tahlil
-              qilish.
-              <br />
-              <br />
-              Moliyaviy hisobot va tahlil: daromadlar va xarajatlarning
-              avtomatlashtirilgan hisobi, har bir transport vositasining
-              samaradorligi va rentabelligi bo‘yicha tahlillar.
-            </p>
-            <Button
-              style={{
-                background: "#46A358",
-                color: "white",
-                padding: "20px 25px",
-                border: "none",
-              }}
-            >
-              Tizimga kirish
-            </Button>
-          </Col>
-          <Col xs={24} md={12}>
-            <img
-              src="https://i.pinimg.com/originals/6b/6b/72/6b6b7278581a2aa24948a3c6584e2fe0.jpg"
-              className="info-section-img"
-              alt="Mashina egalari"
-              style={{ width: "100%", borderRadius: 10 }}
-            />
-          </Col>
-        </Row>
-      </section>
-
-      <section className="info-section mt-16">
-        <Row gutter={[32, 32]} align="middle" justify="space-between">
-          <Col xs={24} md={12} order={2} mdOrder={1}>
-            <h5 className="info-section-title">Haydovchilar uchun</h5>
-            <p className="info-section-text">
-              Yuk yuklarini qidirish: Haydovchilar joylashuvi va transport
-              vositasi turiga mos keladigan yuk buyurtmalarini osongina
-              topishlari mumkin.
-              <br />
-              <br />
-              Bir zumda yukni bron qilish va tasdiqlash: Buyurtmalarni qabul
-              qilish jarayonini soddalashtiradi, ishlamay qolish vaqtini
-              kamaytiradi.
-              <br />
-              <br />
-              Navigatsiya va marshrutni optimallashtirish: platforma
-              drayverlarga optimallashtirilgan marshrutlarga kirish imkonini
-              beradi, bu esa vaqt va yoqilg'ini tejashga yordam beradi.
-            </p>
-            <Button
-              style={{
-                background: "#46A358",
-                color: "white",
-                padding: "20px",
-                border: "none",
-              }}
-              icon={<i className="fa-brands fa-apple" />}
-            >
-              Haydovchilar uchun
-            </Button>
-          </Col>
-          <Col xs={24} md={12} order={1} mdOrder={2}>
-            <img
-              src="https://i.pinimg.com/originals/6b/6b/72/6b6b7278581a2aa24948a3c6584e2fe0.jpg"
-              className="info-section-img"
-              alt="Haydovchi"
-              style={{ width: "100%", borderRadius: 10 }}
-            />
-          </Col>
-        </Row>
-      </section>
+              {/* Image */}
+              <Col
+                xs={{ span: 24, order: 1 }}
+                md={{ span: 12, order: isEven ? 2 : 1 }}
+              >
+                <img
+                  src={section.image}
+                  alt={section.title}
+                  style={{
+                    width: "100%",
+                    borderRadius: 12,
+                    boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
+                  }}
+                />
+              </Col>
+            </Row>
+          </section>
+        );
+      })}
     </div>
   );
 };

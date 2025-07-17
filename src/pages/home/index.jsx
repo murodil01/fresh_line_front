@@ -119,7 +119,7 @@ const Home = () => {
               <img
                 src="https://cdn1.iconfinder.com/data/icons/bokbokstars-121-classic-stock-icons-1/512/person-man.png"
                 alt="avatar"
-                className="w-[100px] h-[120px] sm:w-[120px] sm:h-[155px] object-cover"
+                className="w-[100px] h-[120px] sm:w-[120px] sm:h-[145px] object-cover"
               />
             </div>
           </div>
