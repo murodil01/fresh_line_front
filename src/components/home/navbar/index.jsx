@@ -59,16 +59,16 @@ const Navbar = () => {
         <div className="md:hidden bg-white px-4 pb-4">
           <a
             href="tel:+998951563636"
-            className="flex items-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-700 w-full px-4 py-2 rounded-xl text-sm mb-2"
+            className="flex items-center border-none gap-2 bg-gray-100 hover:bg-gray-200 text-gray-700 w-full px-4 py-2 rounded-xl text-sm mb-2"
           >
             <Phone className="w-4 h-4" />
             +998 95 156 36 36
           </a>
           <button
             onClick={handleLoginClick}
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm"
+            className="w-full bg-[#46A358] hover:bg-[#4b8657] text-white px-4 py-2 rounded-lg text-sm"
           >
-            Login
+            Tizimga kirish
           </button>
         </div>
       )}

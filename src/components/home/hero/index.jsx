@@ -7,15 +7,16 @@ const Hero = () => {
   const handleLoginClick = () => {
     navigate("/login");
   };
+
   return (
-    <div className="py-35 px-4 max-w-7xl mx-auto text-center">
-      <h1 className="text-[70px] font-bold text-gray-900">
+    <div className="px-4 py-20 md:py-32 max-w-7xl mx-auto text-center">
+      <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[70px] font-bold text-gray-900 leading-tight">
         <AnimatedWords />
         <br />
         ishini osonlashtiruvchi tizim
       </h1>
 
-      <p className="mt-4 text-[25px] text-gray-600">
+      <p className="mt-4 text-lg sm:text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
         Dispetcherlar, Haydovchilar, Yuk egalari, Mashina egalari — barchasi
         bitta tizimda
       </p>
@@ -23,12 +24,12 @@ const Hero = () => {
       <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-8">
         <button
           onClick={handleLoginClick}
-          className="bg-[#46A358] hover:bg-[#4b8657] font-[700] text-white text-[20px] px-[66.5px] py-4 rounded-lg transition"
+          className="w-[280px] h-[60px] bg-[#46A358] hover:bg-[#4b8657] font-bold text-white text-lg sm:text-xl rounded-lg transition"
         >
           Tizimga kirish
         </button>
 
-        <button className="flex border-none  bg-gray-100 items-center gap-2 font-[700] text-gray-800  text-[20px] px-[11px] py-4 rounded-lg border hover:bg-gray-200 transition">
+        <button className="w-[280px] h-[60px] flex items-center justify-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold text-lg sm:text-xl rounded-lg transition">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"

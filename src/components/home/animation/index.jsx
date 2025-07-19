@@ -30,7 +30,7 @@ const AnimatedWords = () => {
 
   return (
     <MotionSpan
-      className="text-[#46A358] text-[70px] font-bold"
+      className="text-[#46A358] text-4xl sm:text-5xl md:text-6xl lg:text-[70px] font-bold leading-tight"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}

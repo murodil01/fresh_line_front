@@ -10,7 +10,7 @@ const System = () => {
     <section className="bg-[#001722] py-16 text-white mt-10">
       <div className="w-[90%] mx-auto text-center">
         <h2 className="text-4xl sm:text-5xl font-bold mb-4 leading-tight">
-          Diip platformasi
+          Fresh Line platformasi
           <br />
           nima beradi
         </h2>

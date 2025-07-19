@@ -14,7 +14,7 @@ const Carusel = () => {
   const repeated = [...partners, ...partners];
 
   return (
-    <div className="w-full overflow-hidden bg-white py-10 mt-10">
+    <div className="w-full overflow-hidden bg-white py-10">
       <style>
         {`
           @keyframes scrollX {

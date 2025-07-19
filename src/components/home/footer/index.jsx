@@ -1,11 +1,11 @@
 import logom from "../../../assets/logom.png";
+import { MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
     <footer className="bg-[#001722] text-white py-10 px-4">
       <div className="w-[90%] m-auto">
-        <div className="flex flex-col md:flex-row md:justify-between gap-10">
-
+        <div className="flex flex-col md:flex-row md:justify-between gap-5">
           <div className="md:w-7/12">
             <div className="mb-4">
               <a href="/">
@@ -18,24 +18,23 @@ const Footer = () => {
                 />
               </a>
             </div>
-            <p className="text-sm">
-              Logistic technology company
-            </p>
           </div>
 
           <div className="md:w-5/12 flex flex-col md:flex-row gap-8">
-
             <div>
               <h6 className="text-lg font-semibold mb-2">Kontaktlar</h6>
-              <ul className="space-y-1">
+              <ul className="space-y-1 text-sm">
                 <li>
-                  <a href="tel:+998907382002" className="hover:underline">
-                    +998 90 7382002
+                  <a href="tel:+998951563636" className="hover:underline">
+                    +998 95 156 36 36
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:diip@info.uz" className="hover:underline">
-                    diip@info.uz
+                  <a
+                    href="mailto:nurmamatovmirodil978@gmail.com"
+                    className="hover:underline"
+                  >
+                    nurmamatovmirodil978@gmail.com
                   </a>
                 </li>
               </ul>
@@ -44,15 +43,15 @@ const Footer = () => {
             <div>
               <h6 className="text-lg font-semibold mb-2">Manzil</h6>
               <p className="text-sm mb-1">
-                Xorazm viloyati, Urganch sh, Fayozov ko'chasi 2a
+                Toshkent 100084, Amir Temur shox ko'chasi 108 uy
               </p>
               <a
-                href="https://maps.google.com/?q=41.321452,69.201385"
+                href="https://www.google.com/maps?ll=41.34093,69.286729&z=15&t=m&hl=uz&gl=US&mapclient=embed&cid=5956285218696080088"
                 target="_blank"
                 rel="noreferrer"
-                className="hover:underline text-sm"
+                className="hover:underline text-sm inline-flex items-center gap-1"
               >
-                Xaritada ko'rish
+                Xaritada ko'rish <MapPin size={16} />
               </a>
             </div>
           </div>
