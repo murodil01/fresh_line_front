@@ -15,7 +15,6 @@ import Import from "../pages/import";
 
 import PrivateRoute from "../components/private-route";
 import HomeComponent from "../components/home";
-import Error from "../pages/error";
 import PrivateError from "../pages/private-error";
 
 export const router = createBrowserRouter([
@@ -49,10 +48,5 @@ export const router = createBrowserRouter([
         ],
       },
     ],
-  },
-
-  {
-    path: "*",
-    element: <Error />,
   },
 ]);
