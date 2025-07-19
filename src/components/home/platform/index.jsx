@@ -64,7 +64,6 @@ const Platform = () => {
         return (
           <section className="info-section" key={index}>
             <Row gutter={[32, 32]} align="middle" justify="space-between">
-              {/* Text */}
               <Col
                 xs={{ span: 24, order: 2 }}
                 md={{ span: 12, order: isEven ? 1 : 2 }}
@@ -87,7 +86,6 @@ const Platform = () => {
                 </Button>
               </Col>
 
-              {/* Image */}
               <Col
                 xs={{ span: 24, order: 1 }}
                 md={{ span: 12, order: isEven ? 2 : 1 }}

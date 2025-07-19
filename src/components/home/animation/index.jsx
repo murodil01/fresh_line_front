@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const texts = ["Dispetcherlar", "Yuk egalari", "Mashina egalari"];
+const texts = ["Fermerlar", "Restoranlar", "Kafelar", "Mehmonxonalar"];
 const MotionSpan = motion.span;
 
 const AnimatedWords = () => {

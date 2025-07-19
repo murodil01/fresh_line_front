@@ -1,11 +1,11 @@
 const YouTube = () => {
   return (
-    <div className="flex flex-col items-center gap-6">
-      <div className="w-[90%] aspect-video">
+    <div className="flex flex-col items-center gap-6 mb-20">
+      <div className="w-[95%] sm:w-[85%] md:w-[75%] aspect-video">
         <iframe
-          className="w-[80%] h-[80%] m-auto rounded-[50px] shadow-lg"
-          src="https://www.youtube.com/embed/iwj5gmrhK0M"
-          title="Eldor Shomurodov podkast"
+          className="w-full h-full rounded-[12px] sm:rounded-[24px] md:rounded-[20px] shadow-lg"
+          src="https://www.youtube.com/embed/D50fOreyKaM?rel=0&modestbranding=1&showinfo=0&autoplay=1&mute=1"
+          title="Fresh Line video"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
