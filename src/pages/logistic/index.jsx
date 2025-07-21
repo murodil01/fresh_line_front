@@ -1,4 +1,3 @@
-import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 
 const companies = [
@@ -25,7 +24,6 @@ const companies = [
 const Logistic = () => {
   return (
     <div className="text-black min-h-screen">
-      <Navbar />
 
       <div className="w-full py-8">
         <h1 className="text-gray-700 font-semibold text-2xl mb-6 text-left">

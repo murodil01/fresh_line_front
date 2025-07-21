@@ -1,4 +1,3 @@
-import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 
 const defaultImg = "https://cdn-icons-png.flaticon.com/512/3135/3135715.png";
@@ -27,7 +26,6 @@ const exporters = [
 const Export = () => {
   return (
     <div className="text-black min-h-screen">
-      <Navbar />
 
       <div className="w-full py-8">
         <h1 className="text-gray-500 font-semibold text-2xl mb-6 text-left">

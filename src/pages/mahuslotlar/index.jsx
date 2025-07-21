@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 import { Modal } from "antd";
 
@@ -42,7 +41,6 @@ const Mahsulotlar = () => {
 
   return (
     <div className="w-full text-black">
-      <Navbar />
 
       <div className="py-8">
         <div className="flex justify-between items-center mb-6">

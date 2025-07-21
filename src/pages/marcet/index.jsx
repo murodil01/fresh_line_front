@@ -1,11 +1,9 @@
-import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 import { Home } from "lucide-react";
 
 const Marcet = () => {
   return (
     <div className="w-full">
-      <Navbar />
       <div>
         <h1 className="font-[500] text-gray-500 text-2xl">
           Market kataloglari

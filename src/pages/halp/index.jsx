@@ -1,10 +1,8 @@
-import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 
 const Halp = () => {
   return (
     <div className="wull">
-      <Navbar />
       <div className="bg-white shadow-md rounded-xl p-8 w-full">
         <h1 className="text-3xl font-bold text-[#46A358] mb-6 border-b pb-2">
           Yordam va qo'llab-quvvatlash

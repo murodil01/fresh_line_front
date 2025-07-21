@@ -1,4 +1,3 @@
-import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 import {
   LineChart,
@@ -24,7 +23,6 @@ const Statistic = () => {
 
   return (
     <div className="text-black min-h-screen flex flex-col">
-      <Navbar />
 
       <div className="max-w-6xl mx-auto w-full py-8 flex-1">
         <div className="bg-white shadow-md rounded-lg p-4 mb-6">

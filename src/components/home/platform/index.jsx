@@ -1,57 +1,54 @@
 import { Row, Col, Button } from "antd";
-
+import ship from "../../../assets/platform/ship.jpg";
+import shef from "../../../assets/platform/shef.jpg";
+import fermers from "../../../assets/platform/fermers.jpg";
 const sections = [
   {
-    title: "Dispetcherlar uchun",
+    title: "Fermerlar uchun moslashtirilgan yetkazib berish yo'llari",
     content: `
-      Yuk tashishni markazlashtirilgan boshqarish: Dispetcherlarga yuklar, haydovchilar va transport vositalarining yagona ma'lumotlar bazasidan foydalanish imkoniyati beriladi.
+      Aqlli yetkazib berish yo‘llari: Fresh Line platformasi AI yordamida eng samarali, tez va xavfsiz yetkazib berish yo‘llarini tanlab, mahsulotlarni bozorlarga o‘z vaqtida yetkazishni ta’minlaydi.
       
-      Marshrutni avtomatlashtirish: platforma tirbandlik va boshqa yo'l sharoitlarini hisobga olgan holda avtomatik optimal marshrutlarni taklif qiladi.
-      
-      Hujjatlar aylanishini soddalashtirish: hujjatlarni avtomatlashtirish byurokratik tartib-qoidalarni soddalashtiradi.
+      Hujjatlarni raqamlashtirish: Fresh Line orqali fermerlar hujjatlarni elektron ko‘rinishda yuborishlari va qabul qilishlari mumkin — bu esa vaqtni tejaydi va ortiqcha byurokratiyani bartaraf etadi.
+    `,
+    image: fermers,
+    button: "Tizimga kirish",
+  },
+  {
+    title:
+      "Sifatli mahsulot - To‘g‘ridan-to‘g‘ri fermerdan sizning oshxonangizgacha",
+    content: `
+    Fresh Line orqali HORECA sohasidagi hamkorlar eng yangi, mahalliy mahsulotlarni to‘g‘ridan-to‘g‘ri fermerlardan oladilar. 
+    
+    AI asosida optimallashtirilgan logistika tufayli sizga har doim tezkor, sovitilgan yetkazib berish kafolatlanadi.
+    `,
+    image: shef,
+    button: "Tizimga kirish",
+  },
+  {
+    title:
+      "O‘zbekistonning o‘z logistika tizimi",
+    content: `
+      Fresh Line — bu xorijiy yechim emas.
+      Bu O‘zbekiston ichida yaratilgan, mahalliy yo‘llar, iqlim va bozor sharoitlariga moslashtirilgan zamonaviy logistika tizimidir.
+      Bizning AI tizimimiz tumanlar, yo‘llardagi yuklama va mikroiqlimni hisobga olib, mahsulotlar xavfsiz va tez yetkazilishini ta’minlaydi.
+      Yagona platforma — fermerdan to mijozgacha, o‘zimizniki!
+
     `,
     image:
       "https://i.pinimg.com/originals/6b/6b/72/6b6b7278581a2aa24948a3c6584e2fe0.jpg",
     button: "Tizimga kirish",
   },
   {
-    title: "Yuk egalari uchun",
+    title:
+      "Fresh Line eksport bilan birga",
     content: `
-      Avtotransport vositalariga keng kirish: mos transport vositalarini topish, shartlarni solishtirish imkoniyati.
-      
-      Shaffoflik va nazorat: real vaqt rejimida kuzatish, bildirishnomalar va tarixga kirish.
-      
-      Soddalashtirilgan logistika: bitta platforma orqali vositachilar ehtiyoji kamayadi.
+      Fresh Line eksport yo‘llarini soddalashtiradi.
+      Bizning AI tizimimiz talab prognozlari va bojxona talablari asosida sizga eng foydali bozorlar va eng tez yetkazib berish yo‘nalishlarini taklif qiladi.
+      Import uchun esa — Fresh Line ishonchli hamkor sifatida, xorijiy mahsulotlarni o‘z vaqtida, zarur sertifikatlar bilan yetkazadi.
+
     `,
-    image:
-      "https://i.pinimg.com/originals/6b/6b/72/6b6b7278581a2aa24948a3c6584e2fe0.jpg",
+    image: ship,
     button: "Tizimga kirish",
-  },
-  {
-    title: "Mashina egalari uchun",
-    content: `
-      Yukni maksimallashtirish: transport egalariga yuk topishga yordam beradi, ishlamay qolish vaqtini kamaytiradi.
-      
-      Filoni boshqarish: texnik xizmatlarni rejalashtirish, samaradorlik tahlili.
-      
-      Moliyaviy hisobot: avtomatlashtirilgan hisobotlar, daromad va xarajat nazorati.
-    `,
-    image:
-      "https://i.pinimg.com/originals/6b/6b/72/6b6b7278581a2aa24948a3c6584e2fe0.jpg",
-    button: "Tizimga kirish",
-  },
-  {
-    title: "Haydovchilar uchun",
-    content: `
-      Yuk yuklarini qidirish: joylashuv va vosita turiga mos buyurtmalar.
-      
-      Bir zumda yukni bron qilish: ishlamay qolish vaqtini kamaytiradi.
-      
-      Navigatsiya: optimallashtirilgan marshrutlar bilan vaqt va yoqilg'i tejaladi.
-    `,
-    image:
-      "https://i.pinimg.com/originals/6b/6b/72/6b6b7278581a2aa24948a3c6584e2fe0.jpg",
-    button: "Haydovchilar uchun",
   },
 ];
 

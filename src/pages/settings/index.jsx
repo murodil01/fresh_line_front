@@ -1,10 +1,8 @@
-import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 
 const Settings = () => {
   return (
     <div className="w-full">
-      <Navbar />
       <div className="w-full bg-white shadow-lg rounded-xl p-8">
         <h1 className="text-3xl font-bold text-[#46A358] mb-6 border-b pb-2">
           Foydalanuvchi sozlamalari

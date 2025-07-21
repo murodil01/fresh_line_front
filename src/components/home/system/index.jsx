@@ -35,12 +35,12 @@ const System = () => {
               </div>
               <div className="w-full sm:w-2/3 text-center sm:text-left">
                 <h3 className="text-xl sm:text-2xl font-semibold mb-2">
-                  Oson yuklar topa olish imkoniyati
+                  Yuklar bilan to‘g‘ridan-to‘g‘ri bog‘laning.
                 </h3>
                 <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
-                  Haydovchilar o'z joylashuvlariga va transport vositasining
-                  turiga mos keladigan mavjud buyurtmalarni oson topishlari
-                  mumkin.
+                  Haydovchilar joylashuvga yaqin va transport vositasiga mos
+                  yuklarni real vaqtda topishlari mumkin. Ortiqcha qo‘ng‘iroqlar
+                  va kutishlarsiz.
                 </p>
               </div>
             </div>
@@ -60,12 +60,12 @@ const System = () => {
               </div>
               <div className="w-full sm:w-2/3 text-center sm:text-left">
                 <h3 className="text-xl sm:text-2xl font-semibold mb-2">
-                  Oson yuk mashinalar topa olish imkoniyati
+                  Xavfsiz va ishonchli foydalanuvchilar.
                 </h3>
                 <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
-                  Yuk egalari o'z ehtiyojlariga mos keladigan transport
-                  vositalarini tezda topish, shartlarni va tashish narxini
-                  solishtirish imkoniyatiga ega bo'ladi.
+                  Fresh Line’dagi har bir foydalanuvchi va transport vositasi
+                  shaxsiy tekshiruvdan o‘tadi. Siz faqat real va ishonchli
+                  mijozlar bilan ishlaysiz.
                 </p>
               </div>
             </div>
@@ -74,11 +74,12 @@ const System = () => {
           <div className="bg-[#0A1E2A] p-6 rounded-2xl shadow-lg flex flex-col justify-between">
             <div>
               <h3 className="text-xl sm:text-2xl font-semibold mb-3">
-                Tekshiruvdan o'tgan foydalanuvchilar
+                Kerakli yuk mashinasini tez toping.
               </h3>
               <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
-                Har bir transport vositasi va foydalanuvchilarning barchasi
-                shaxsni tasdiqlovchi tekshiruvdan o'tgan.
+                Yuk egalari o‘z yuklari uchun eng mos va eng arzon variantlarni
+                bir necha daqiqada topishlari mumkin. Narx, shart va vaqtni
+                taqqoslang.
               </p>
             </div>
             <div className="flex items-center justify-center mt-6 relative">
@@ -102,7 +103,7 @@ const System = () => {
           </button>
           <button className="bg-gray-500 text-white px-6 py-3 rounded-lg flex items-center gap-2 hover:bg-gray-800 transition text-lg">
             <i className="fa-brands fa-apple text-xl"></i>
-            <span>Haydovchilar uchun</span>
+            <span>Platformani yuklash</span>
           </button>
         </div>
       </div>
