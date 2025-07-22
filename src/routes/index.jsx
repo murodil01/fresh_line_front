@@ -14,6 +14,7 @@ import Settings from "../pages/settings";
 import Import from "../pages/import";
 
 import PrivateRoute from "../components/private-route";
+import GuestRoute from "../components/GuestRoute"; 
 import HomeComponent from "../components/home";
 import PrivateError from "../pages/private-error";
 
@@ -24,8 +25,13 @@ export const router = createBrowserRouter([
   },
 
   {
-    path: "/login",
-    element: <Login />,
+    element: <GuestRoute />, 
+    children: [
+      {
+        path: "/login",
+        element: <Login />,
+      },
+    ],
   },
 
   {
@@ -44,7 +50,7 @@ export const router = createBrowserRouter([
           { path: "/marcet", element: <Marcet /> },
           { path: "/halp", element: <Halp /> },
           { path: "/settings", element: <Settings /> },
-          {path: "*", element: <PrivateError/>}
+          { path: "*", element: <PrivateError /> },
         ],
       },
     ],

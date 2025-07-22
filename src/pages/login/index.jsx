@@ -1,28 +1,41 @@
-import logo1 from "../../assets/logo1.png";
-import logom from "../../assets/logom.png";
+import { useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 import { Form, Input, Button } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
-import { usaAxios } from "../../hooks/useAxios";
-import { useState } from "react";
 import { Loader } from "lucide-react";
 import toast from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
+
+import logo1 from "../../assets/logo1.png";
+import logom from "../../assets/logom.png";
+import { usaAxios } from "../../hooks/useAxios";
 
 const Login = () => {
   const axios = usaAxios();
-  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+
+  const token = localStorage.getItem("token");
+
+  if (token) {
+    return <Navigate to="/dashboard" replace />;
+  }
+
   const login = (e) => {
     setLoading(true);
     axios({ url: "api/users/login/", method: "POST", body: e })
       .then((data) => {
-        toast.success("Welcome");
-        let { token } = data;
+        const token = data.access;
+        if (!token) {
+          toast.error("❌ Token topilmadi!");
+          return;
+        }
+
         localStorage.setItem("token", token);
-        navigate("/dashboard")
+        toast.success("Welcome ✅");
+        navigate("/dashboard");
       })
       .catch(() => {
-        toast.error("Login or password error");
+        toast.error("Login yoki parol xato ❌");
       })
       .finally(() => setLoading(false));
   };
@@ -61,7 +74,7 @@ const Login = () => {
               ]}
             >
               <Input
-                prefix={<UserOutlined className="text-[#46A358] h-[30px]" />}
+                prefix={<UserOutlined className="text-[#46A358]" />}
                 placeholder="Username kiriting"
               />
             </Form.Item>
@@ -72,7 +85,7 @@ const Login = () => {
               rules={[{ required: true, message: "Parolni kiriting!" }]}
             >
               <Input.Password
-                prefix={<LockOutlined className="text-[#46A358] h-[30px]" />}
+                prefix={<LockOutlined className="text-[#46A358]" />}
                 placeholder="Parolni kiriting"
               />
             </Form.Item>

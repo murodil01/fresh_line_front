@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Loader } from "lucide-react";
 import { usaAxios } from "../../../hooks/useAxios";
 
 const Items = () => {
-  const axios = usaAxios(); 
+  const axios = usaAxios();
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -11,7 +11,7 @@ const Items = () => {
     setLoading(true);
     axios({ url: "api/products/", method: "GET" })
       .then((res) => {
-        setProducts(res.data);
+        setProducts(res); 
       })
       .catch((err) => {
         console.error("Mahsulotlarni olishda xatolik:", err);
@@ -38,7 +38,7 @@ const Items = () => {
             >
               <img
                 src={
-                  product.image !== "string"
+                  product.image && product.image !== "string"
                     ? product.image
                     : "https://via.placeholder.com/150"
                 }
@@ -50,7 +50,7 @@ const Items = () => {
                 {product.description}
               </p>
               <p className="text-green-600 font-bold mt-2">
-                ${product.price}
+                ${parseFloat(product.price).toFixed(2)}
               </p>
             </div>
           ))}

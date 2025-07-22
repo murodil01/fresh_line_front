@@ -72,19 +72,21 @@ const Platform = () => {
                 <p className="info-section-text whitespace-pre-line text-gray-700 mb-4">
                   {section.content.trim()}
                 </p>
-                <Button
-                  onClick={handleLoginClick}
-                  style={{
-                    background: "#46A358",
-                    color: "white",
-                    fontSize: "15px",
-                    padding: "20px",
-                    border: "none",
-                    borderRadius: "7px",
-                  }}
-                >
-                  Tizimga kirish
-                </Button>
+                <div className="text-center md:text-left">
+                  <Button
+                    onClick={handleLoginClick}
+                    style={{
+                      background: "#46A358",
+                      color: "white",
+                      fontSize: "15px",
+                      padding: "22px",
+                      border: "none",
+                      borderRadius: "7px",
+                    }}
+                  >
+                    Tizimga kirish
+                  </Button>
+                </div>
               </Col>
 
               <Col

@@ -1,10 +1,11 @@
-import { Phone, User } from "lucide-react";
 import { useEffect, useState } from "react";
 import Footer from "../../components/footer";
 import Items from "./items";
 import Application from "./application";
 import Opinions from "./opinions";
-import Pro from "./pro"
+import Pro from "./pro";
+import Users from "./users"; 
+
 const Home = () => {
   const [activeTab, setActiveTab] = useState("mahsulotlar");
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
@@ -31,11 +32,11 @@ const Home = () => {
       case "mahsulotlar":
         return <Items />;
       case "ariza":
-        return <Application/>;
+        return <Application />;
       case "sharxlar":
-        return <Opinions/>;
+        return <Opinions />;
       case "pro":
-        return <Pro/>;
+        return <Pro />;
       default:
         return null;
     }
@@ -68,19 +69,7 @@ const Home = () => {
       </div>
 
       <div className="mt-5 flex flex-col lg:flex-row gap-4">
-        <div className="shadow px-4 py-5 flex flex-col gap-2 w-full sm:w-[250px] rounded-lg text-gray-500 bg-white">
-          <h3 className="text-[17px] font-semibold">Ma'lumot</h3>
-          <p className="flex items-center gap-2 text-[15px]">
-            <User className="text-[15px]" /> Ism
-          </p>
-          <p className="flex items-center gap-2 text-[15px]">
-            <User className="text-[15px]" /> Familiya
-          </p>
-          <h3 className="text-[17px] mt-4 font-semibold">Aloqa</h3>
-          <p className="flex items-center gap-2 text-[15px]">
-            <Phone className="text-[15px]" /> Telefon
-          </p>
-        </div>
+        <Users />
 
         <div className="w-full">
           <nav>
@@ -112,3 +101,4 @@ const Home = () => {
 };
 
 export default Home;
+

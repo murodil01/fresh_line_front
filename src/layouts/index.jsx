@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import Sidebar from "../components/SideBar.jsx";
 import { Menu, Sun, Bell, UserRoundPen, X } from "lucide-react";
+import toast from "react-hot-toast";
 
 const MainLayout = () => {
   const navigate = useNavigate();
@@ -14,10 +15,33 @@ const MainLayout = () => {
   const closeModal = () => setModalOpen(false);
 
   const handleLogout = () => {
-    localStorage.removeItem("token");
-    alert("Logout qilindi");
-    closeModal();
-    navigate("/login");
+    toast((t) => (
+      <div className="p-4">
+        <p className="text-sm font-semibold mb-2">Tizimdan chiqmoqchimisiz?</p>
+        <div className="flex justify-end gap-2">
+          <button
+            onClick={() => toast.dismiss(t.id)}
+            className="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300 text-sm"
+          >
+            Bekor qilish
+          </button>
+          <button
+            onClick={() => {
+              toast.dismiss(t.id);
+              toast.success("Tizimdan chiqdingiz ✅", { duration: 1000 });
+              closeModal();
+              setTimeout(() => {
+                localStorage.removeItem("token");
+                navigate("/login");
+              }, 1000);
+            }}
+            className="px-3 py-1 bg-[#46A358] text-white rounded hover:bg-[#3d8b4d] text-sm"
+          >
+            Ha, chiqish
+          </button>
+        </div>
+      </div>
+    ));
   };
 
   useEffect(() => {
@@ -53,7 +77,7 @@ const MainLayout = () => {
 
       <div className="flex-1">
         <div className="hidden md:block border-b border-[#46A358]">
-          <div className="max-w-[1200px] mx-auto flex justify-end gap-4 text-[#46A358] px-[25px] pt-4 pb-4">
+          <div className="max-w-[1200px] mx-auto flex justify-end gap-4 text-[#46A358] px-[5px] pt-4 pb-4">
             <Sun className="cursor-pointer" />
             <Bell className="cursor-pointer" />
             <UserRoundPen className="cursor-pointer" onClick={toggleModal} />

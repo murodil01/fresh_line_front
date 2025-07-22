@@ -1,5 +1,3 @@
-// import Drivers from "./drivers";
-// import Carusel from "./carusel";
 import Footer from "./footer";
 import Hero from "./hero";
 import Navbar from "./navbar";
@@ -13,8 +11,6 @@ const HomeComponent = () => {
       <Navbar />
       <Hero />
       <YouTube />
-      {/* <Carusel /> */}
-      {/* <Drivers /> */}
       <Platform />
       <System />
       <Footer />

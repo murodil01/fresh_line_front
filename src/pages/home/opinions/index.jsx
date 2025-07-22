@@ -1,7 +1,7 @@
 
 const Opinions = () => {
   return (
-    <div>
+    <div className="text-center my-20">
       Opinions
     </div>
   )
