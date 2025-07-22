@@ -1,11 +1,17 @@
 import logom from "../../../assets/logom.png";
 import { MapPin } from "lucide-react";
+import {
+  FaYoutube,
+  FaInstagram,
+  FaTelegramPlane,
+  FaFacebookF,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#001722] text-white py-10 px-4">
+    <footer className="bg-[#001722] text-white py-10 px-4 border-t border-gray-500">
       <div className="w-[90%] m-auto">
-        <div className="flex flex-col md:flex-row md:justify-between gap-5">
+        <div className="flex flex-col md:flex-row md:justify-between gap-8">
           <div className="md:w-7/12">
             <div className="mb-4">
               <a href="/">
@@ -20,8 +26,8 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="md:w-5/12 flex flex-col md:flex-row gap-8">
-            <div>
+          <div className="md:w-5/12 flex flex-col sm:flex-row gap-8">
+            <div className="flex-1">
               <h6 className="text-lg font-semibold mb-2">Kontaktlar</h6>
               <ul className="space-y-1 text-sm">
                 <li>
@@ -38,9 +44,44 @@ const Footer = () => {
                   </a>
                 </li>
               </ul>
+
+              <div className="mt-4 flex gap-4">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-red-600 hover:scale-110 duration-200 text-xl"
+                >
+                  <FaYoutube />
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-pink-500 hover:scale-110 duration-200 text-xl"
+                >
+                  <FaInstagram />
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-blue-500 hover:scale-110 duration-200 text-xl"
+                >
+                  <FaTelegramPlane />
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-blue-700 hover:scale-110 duration-200 text-xl"
+                >
+                  <FaFacebookF />
+                </a>
+              </div>
             </div>
 
-            <div>
+            <div className="flex-1">
               <h6 className="text-lg font-semibold mb-2">Manzil</h6>
               <p className="text-sm mb-1">
                 Toshkent 100084, Amir Temur shox ko'chasi 108 uy
@@ -55,41 +96,6 @@ const Footer = () => {
               </a>
             </div>
           </div>
-        </div>
-
-        <div className="mt-10 flex gap-4 justify-start md:justify-end">
-          <a
-            href="https://youtube.com/@diipuz?si=MolE1GKy3wYo1p9S"
-            target="_blank"
-            rel="noreferrer"
-            className="text-red-600 hover:scale-110 duration-200 text-2xl"
-          >
-            <i className="fa-brands fa-youtube"></i>
-          </a>
-          <a
-            href="https://instagram.com/diip.uz?igshid=OGQ5ZDc2ODk2ZA=="
-            target="_blank"
-            rel="noreferrer"
-            className="text-pink-600 hover:scale-110 duration-200 text-2xl"
-          >
-            <i className="fa-brands fa-instagram"></i>
-          </a>
-          <a
-            href="https://t.me/diip_uz"
-            target="_blank"
-            rel="noreferrer"
-            className="text-blue-500 hover:scale-110 duration-200 text-2xl"
-          >
-            <i className="fa-brands fa-telegram"></i>
-          </a>
-          <a
-            href="https://www.facebook.com/profile.php?id=61551358637063"
-            target="_blank"
-            rel="noreferrer"
-            className="text-blue-700 hover:scale-110 duration-200 text-2xl"
-          >
-            <i className="fa-brands fa-facebook"></i>
-          </a>
         </div>
       </div>
     </footer>

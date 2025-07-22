@@ -2,57 +2,58 @@ import { Row, Col, Button } from "antd";
 import ship from "../../../assets/platform/ship.jpg";
 import shef from "../../../assets/platform/shef.jpg";
 import fermers from "../../../assets/platform/fermers.jpg";
+import { useNavigate } from "react-router-dom";
+
 const sections = [
   {
     title: "Fermerlar uchun moslashtirilgan yetkazib berish yo'llari",
     content: `
-      Aqlli yetkazib berish yo‘llari: Fresh Line platformasi AI yordamida eng samarali, tez va xavfsiz yetkazib berish yo‘llarini tanlab, mahsulotlarni bozorlarga o‘z vaqtida yetkazishni ta’minlaydi.
+      Aqlli yetkazib berish yo'llari: Fresh Line platformasi AI yordamida eng samarali, tez va xavfsiz yetkazib berish yo'llarini tanlab, mahsulotlarni bozorlarga o'z vaqtida yetkazishni ta’minlaydi.
       
-      Hujjatlarni raqamlashtirish: Fresh Line orqali fermerlar hujjatlarni elektron ko‘rinishda yuborishlari va qabul qilishlari mumkin — bu esa vaqtni tejaydi va ortiqcha byurokratiyani bartaraf etadi.
+      Hujjatlarni raqamlashtirish: Fresh Line orqali fermerlar hujjatlarni elektron ko'rinishda yuborishlari va qabul qilishlari mumkin — bu esa vaqtni tejaydi va ortiqcha byurokratiyani bartaraf etadi.
     `,
     image: fermers,
-    button: "Tizimga kirish",
   },
   {
     title:
-      "Sifatli mahsulot - To‘g‘ridan-to‘g‘ri fermerdan sizning oshxonangizgacha",
+      "Sifatli mahsulot - To'g'ridan-to'g'ri fermerdan sizning oshxonangizgacha",
     content: `
-    Fresh Line orqali HORECA sohasidagi hamkorlar eng yangi, mahalliy mahsulotlarni to‘g‘ridan-to‘g‘ri fermerlardan oladilar. 
+    Fresh Line orqali HORECA sohasidagi hamkorlar eng yangi, mahalliy mahsulotlarni to'g'ridan-to'g'ri fermerlardan oladilar. 
     
     AI asosida optimallashtirilgan logistika tufayli sizga har doim tezkor, sovitilgan yetkazib berish kafolatlanadi.
     `,
     image: shef,
-    button: "Tizimga kirish",
   },
   {
-    title:
-      "O‘zbekistonning o‘z logistika tizimi",
+    title: "O'zbekistonning o'z logistika tizimi",
     content: `
       Fresh Line — bu xorijiy yechim emas.
-      Bu O‘zbekiston ichida yaratilgan, mahalliy yo‘llar, iqlim va bozor sharoitlariga moslashtirilgan zamonaviy logistika tizimidir.
-      Bizning AI tizimimiz tumanlar, yo‘llardagi yuklama va mikroiqlimni hisobga olib, mahsulotlar xavfsiz va tez yetkazilishini ta’minlaydi.
-      Yagona platforma — fermerdan to mijozgacha, o‘zimizniki!
+      Bu O'zbekiston ichida yaratilgan, mahalliy yo'llar, iqlim va bozor sharoitlariga moslashtirilgan zamonaviy logistika tizimidir.
+      Bizning AI tizimimiz tumanlar, yo'llardagi yuklama va mikroiqlimni hisobga olib, mahsulotlar xavfsiz va tez yetkazilishini ta’minlaydi.
+      Yagona platforma — fermerdan to mijozgacha, o'zimizniki!
 
     `,
     image:
       "https://i.pinimg.com/originals/6b/6b/72/6b6b7278581a2aa24948a3c6584e2fe0.jpg",
-    button: "Tizimga kirish",
   },
   {
-    title:
-      "Fresh Line eksport bilan birga",
+    title: "Fresh Line eksport bilan birga",
     content: `
-      Fresh Line eksport yo‘llarini soddalashtiradi.
-      Bizning AI tizimimiz talab prognozlari va bojxona talablari asosida sizga eng foydali bozorlar va eng tez yetkazib berish yo‘nalishlarini taklif qiladi.
-      Import uchun esa — Fresh Line ishonchli hamkor sifatida, xorijiy mahsulotlarni o‘z vaqtida, zarur sertifikatlar bilan yetkazadi.
+      Fresh Line eksport yo'llarini soddalashtiradi.
+      Bizning AI tizimimiz talab prognozlari va bojxona talablari asosida sizga eng foydali bozorlar va eng tez yetkazib berish yo'nalishlarini taklif qiladi.
+      Import uchun esa — Fresh Line ishonchli hamkor sifatida, xorijiy mahsulotlarni o'z vaqtida, zarur sertifikatlar bilan yetkazadi.
 
     `,
     image: ship,
-    button: "Tizimga kirish",
   },
 ];
 
 const Platform = () => {
+  const navigate = useNavigate();
+  const handleLoginClick = () => {
+    navigate("/login");
+  };
+
   return (
     <div className="w-[90%] max-w-[1372px] mx-auto py-10 space-y-24">
       {sections.map((section, index) => {
@@ -72,14 +73,17 @@ const Platform = () => {
                   {section.content.trim()}
                 </p>
                 <Button
+                  onClick={handleLoginClick}
                   style={{
                     background: "#46A358",
                     color: "white",
-                    padding: "16px 24px",
+                    fontSize: "15px",
+                    padding: "20px",
                     border: "none",
+                    borderRadius: "7px",
                   }}
                 >
-                  {section.button}
+                  Tizimga kirish
                 </Button>
               </Col>
 
