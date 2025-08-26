@@ -53,8 +53,8 @@ const Login = () => {
           className="w-50 lg:hidden absolute top-15 left-1/2 -translate-x-1/2"
         />
 
-        <div className="w-full max-w-[350px] mx-auto">
-          <h2 className="text-center text-xl font-semibold mb-6 mt-24 lg:mt-0">
+        <div className="w-full max-w-[400px] mx-auto">
+          <h2 className="text-center text-[30px] font-semibold mb-6 mt-24 lg:mt-0">
             <span className="text-[#46A358] font-bold">Fresh Line</span>{" "}
             tizimiga kirish
           </h2>
@@ -76,6 +76,10 @@ const Login = () => {
               <Input
                 prefix={<UserOutlined className="text-[#46A358]" />}
                 placeholder="Username kiriting"
+                style={{
+                  height: "45px",
+                  borderRadius: "9px",
+                }}
               />
             </Form.Item>
 
@@ -87,6 +91,10 @@ const Login = () => {
               <Input.Password
                 prefix={<LockOutlined className="text-[#46A358]" />}
                 placeholder="Parolni kiriting"
+                style={{
+                  height: "45px",
+                  borderRadius: "9px",
+                }}
               />
             </Form.Item>
 
@@ -99,7 +107,9 @@ const Login = () => {
                   borderColor: "#46A358",
                   color: "white",
                   width: "100%",
-                  height: "40px",
+                  height: "45px",
+                  borderRadius: "9px",
+                  fontSize: "20px"
                 }}
               >
                 {loading ? <Loader className="animate-spin" /> : "Kirish"}
