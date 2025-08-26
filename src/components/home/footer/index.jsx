@@ -6,6 +6,7 @@ import {
   FaTelegramPlane,
   FaFacebookF,
 } from "react-icons/fa";
+import FreshLine_Text from "../../../assets/FResh Line/FreshLine_Text.png"
 
 const Footer = () => {
   return (

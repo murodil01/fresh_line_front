@@ -4,8 +4,9 @@ import { Form, Input, Button } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import { Loader } from "lucide-react";
 import toast from "react-hot-toast";
+import Fresh_login from "../../assets/FResh Line/Fresh_login.png"
 
-import logo1 from "../../assets/logo1.png";
+// import logo1 from "../../assets/logo1.png";
 import logom from "../../assets/logom.png";
 import { usaAxios } from "../../hooks/useAxios";
 
@@ -43,7 +44,7 @@ const Login = () => {
   return (
     <div className="flex flex-col lg:flex-row h-screen">
       <div className="hidden lg:flex w-1/2 bg-[#46A358] items-center justify-center">
-        <img src={logo1} alt="Logo" className="w-2/3" />
+        <img src={Fresh_login} alt="Logo" className="w-2/3" />
       </div>
 
       <div className="w-full lg:w-1/2 flex items-center justify-center px-4 min-h-screen relative">

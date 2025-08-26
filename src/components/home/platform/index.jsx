@@ -3,6 +3,7 @@ import ship from "../../../assets/platform/ship.jpg";
 import shef from "../../../assets/platform/shef.jpg";
 import fermers from "../../../assets/platform/fermers.jpg";
 import { useNavigate } from "react-router-dom";
+import Car_FreshLine from "../../../assets/FResh Line/Car_FreshLine.jpg";
 
 const sections = [
   {
@@ -33,8 +34,7 @@ const sections = [
       Yagona platforma — fermerdan to mijozgacha, o'zimizniki!
 
     `,
-    image:
-      "https://i.pinimg.com/originals/6b/6b/72/6b6b7278581a2aa24948a3c6584e2fe0.jpg",
+    image: Car_FreshLine,
   },
   {
     title: "Fresh Line eksport bilan birga",
