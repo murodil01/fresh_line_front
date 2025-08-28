@@ -1,4 +1,4 @@
-import logom from "../../../assets/logom.png";
+import footerlog from "../../../assets/footerlog.png";
 import { MapPin } from "lucide-react";
 import {
   FaYoutube,
@@ -6,7 +6,6 @@ import {
   FaTelegramPlane,
   FaFacebookF,
 } from "react-icons/fa";
-import FreshLine_Text from "../../../assets/FResh Line/FreshLine_Text.png"
 
 const Footer = () => {
   return (
@@ -17,7 +16,7 @@ const Footer = () => {
             <div className="mb-4">
               <a href="/">
                 <img
-                  src={logom}
+                  src={footerlog}
                   alt="diip.uz"
                   width="143"
                   height="40"

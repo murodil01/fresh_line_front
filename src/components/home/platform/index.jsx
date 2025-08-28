@@ -2,8 +2,10 @@ import { Row, Col, Button } from "antd";
 import ship from "../../../assets/platform/ship.jpg";
 import shef from "../../../assets/platform/shef.jpg";
 import fermers from "../../../assets/platform/fermers.jpg";
+import shirt from "../../../assets/FResh Line/shirt.jpg";
 import { useNavigate } from "react-router-dom";
 import Car_FreshLine from "../../../assets/FResh Line/Car_FreshLine.jpg";
+import FreshLIneCard from "../../../assets/FResh Line/FreshLIneCard.jpg";
 
 const sections = [
   {
@@ -32,7 +34,6 @@ const sections = [
       Bu O'zbekiston ichida yaratilgan, mahalliy yo'llar, iqlim va bozor sharoitlariga moslashtirilgan zamonaviy logistika tizimidir.
       Bizning AI tizimimiz tumanlar, yo'llardagi yuklama va mikroiqlimni hisobga olib, mahsulotlar xavfsiz va tez yetkazilishini ta’minlaydi.
       Yagona platforma — fermerdan to mijozgacha, o'zimizniki!
-
     `,
     image: Car_FreshLine,
   },
@@ -42,9 +43,18 @@ const sections = [
       Fresh Line eksport yo'llarini soddalashtiradi.
       Bizning AI tizimimiz talab prognozlari va bojxona talablari asosida sizga eng foydali bozorlar va eng tez yetkazib berish yo'nalishlarini taklif qiladi.
       Import uchun esa — Fresh Line ishonchli hamkor sifatida, xorijiy mahsulotlarni o'z vaqtida, zarur sertifikatlar bilan yetkazadi.
-
     `,
     image: ship,
+  },
+  {
+    title: "Xodimlarimiz uchun",
+    content: `
+    Biz bilan birga jamoada bo'ladiganlar uchun maxsus brending.
+    `,
+    image: [
+      { src: shirt, size: "large" },
+      { src: FreshLIneCard, size: "small" },
+    ],
   },
 ];
 
@@ -62,6 +72,7 @@ const Platform = () => {
         return (
           <section className="info-section" key={index}>
             <Row gutter={[32, 32]} align="middle" justify="space-between">
+              {/* Text qismi */}
               <Col
                 xs={{ span: 24, order: 2 }}
                 md={{ span: 12, order: isEven ? 1 : 2 }}
@@ -89,19 +100,35 @@ const Platform = () => {
                 </div>
               </Col>
 
+              {/* Rasm qismi */}
               <Col
                 xs={{ span: 24, order: 1 }}
                 md={{ span: 12, order: isEven ? 2 : 1 }}
               >
-                <img
-                  src={section.image}
-                  alt={section.title}
-                  style={{
-                    width: "100%",
-                    borderRadius: 12,
-                    boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
-                  }}
-                />
+                {Array.isArray(section.image) ? (
+                  <div className="flex gap-4 justify-center md:justify-start">
+                    {section.image.map((img, i) => (
+                      <img
+                        key={i}
+                        src={img.src}
+                        alt={section.title}
+                        className={`rounded-lg shadow-lg object-cover ${
+                          img.size === "large" ? "w-2/3" : "w-1/3 max-h-29"
+                        }`}
+                      />
+                    ))}
+                  </div>
+                ) : (
+                  <img
+                    src={section.image}
+                    alt={section.title}
+                    style={{
+                      width: "100%",
+                      borderRadius: 12,
+                      boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
+                    }}
+                  />
+                )}
               </Col>
             </Row>
           </section>

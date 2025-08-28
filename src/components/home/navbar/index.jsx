@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import logom from "../../../assets/logom.png";
+import logo from "../../../assets/logo.jpg";
 import { Phone, Menu, X } from "lucide-react";
 
 const Navbar = () => {
@@ -29,7 +29,7 @@ const Navbar = () => {
       }`}
     >
       <div className="w-[90%] mx-auto flex items-center justify-between py-4">
-        <img src={logom} alt="Logo" className="w-32 md:w-40 ml-[-10px]" />
+        <img src={logo} alt="Logo" className="w-32 md:w-40 ml-[-10px]" />
 
         <div className="hidden md:flex items-center gap-6">
           <a
