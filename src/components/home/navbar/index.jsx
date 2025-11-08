@@ -43,7 +43,7 @@ const Navbar = () => {
             onClick={handleLoginClick}
             className="bg-[#46A358] hover:bg-[#4b8657] text-white px-4 py-2 rounded-lg text-sm transition"
           >
-            Tizimga kirish
+            Login to the system
           </button>
         </div>
 
@@ -68,7 +68,7 @@ const Navbar = () => {
             onClick={handleLoginClick}
             className="w-full bg-[#46A358] hover:bg-[#4b8657] text-white px-4 py-2 rounded-lg text-sm"
           >
-            Tizimga kirish
+            Login to the system
           </button>
         </div>
       )}

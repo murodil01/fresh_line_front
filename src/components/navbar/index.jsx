@@ -8,7 +8,7 @@ const Navbar = () => {
   const closeModal = () => setOpen(false);
 
   const handleLogout = () => {
-    alert("Logout qilindi");
+    alert("Logged out");
     closeModal();
   };
 
@@ -24,7 +24,7 @@ const Navbar = () => {
         <div className="absolute right-2 top-14 bg-white border border-gray-200 rounded-lg shadow-md w-64 p-4 z-50">
           <div className="flex justify-between items-center mb-2">
             <h3 className="text-lg font-semibold text-[#46A358]">
-              Foydalanuvchi
+              User
             </h3>
             <X
               className="w-5 h-5 text-gray-500 cursor-pointer hover:text-red-500"
@@ -33,13 +33,13 @@ const Navbar = () => {
           </div>
 
           <p>
-            <span className="font-medium text-gray-600">Ism:</span> Ali
+            <span className="font-medium text-gray-600">Name:</span> Ali
           </p>
           <p>
-            <span className="font-medium text-gray-600">Familiya:</span> Karimov
+            <span className="font-medium text-gray-600">Surname:</span> Karimov
           </p>
           <p>
-            <span className="font-medium text-gray-600">Rol:</span> Admin
+            <span className="font-medium text-gray-600">Role:</span> Admin
           </p>
 
           <button

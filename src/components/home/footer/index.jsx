@@ -28,7 +28,7 @@ const Footer = () => {
 
           <div className="md:w-5/12 flex flex-col sm:flex-row gap-8">
             <div className="flex-1">
-              <h6 className="text-lg font-semibold mb-2">Kontaktlar</h6>
+              <h6 className="text-lg font-semibold mb-2">Contacts</h6>
               <ul className="space-y-1 text-sm">
                 <li>
                   <a href="tel:+998951563636" className="hover:underline">
@@ -82,9 +82,9 @@ const Footer = () => {
             </div>
 
             <div className="flex-1">
-              <h6 className="text-lg font-semibold mb-2">Manzil</h6>
+              <h6 className="text-lg font-semibold mb-2">Address</h6>
               <p className="text-sm mb-1">
-                Toshkent 100084, Amir Temur shox ko'chasi 108 uy
+                Tashkent 100084, 108 Amir Temur Avenue
               </p>
               <a
                 href="https://www.google.com/maps?ll=41.34093,69.286729&z=15&t=m&hl=uz&gl=US&mapclient=embed&cid=5956285218696080088"
@@ -92,7 +92,7 @@ const Footer = () => {
                 rel="noreferrer"
                 className="hover:underline text-sm inline-flex items-center gap-1"
               >
-                Xaritada ko'rish <MapPin size={16} />
+                View on the map <MapPin size={16} />
               </a>
             </div>
           </div>

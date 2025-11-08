@@ -13,12 +13,12 @@ const System = () => {
     <section className="bg-[#001722] py-16 text-white mt-10">
       <div className="w-[90%] mx-auto text-center">
         <h2 className="text-4xl sm:text-5xl font-bold mb-4 leading-tight">
-          Fresh Line platformasi
+          Fresh Line platform
           <br />
-          nima beradi
+          what it offers
         </h2>
         <p className="text-gray-300 mb-12 text-sm sm:text-base md:text-lg">
-          Logistikadagi asosiy og'riqlarga urg'uv berilgan
+          The main pain points in logistics have been highlighted
         </p>
 
         <div className="grid md:grid-cols-3 gap-6 text-left">
@@ -33,12 +33,12 @@ const System = () => {
               </div>
               <div className="w-full sm:w-2/3 text-center sm:text-left">
                 <h3 className="text-xl sm:text-2xl font-semibold mb-2">
-                  Yuklar bilan to'g'ridan-to'g'ri bog'laning.
+                  Contact directly regarding the cargo.
                 </h3>
                 <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
-                  Haydovchilar joylashuvga yaqin va transport vositasiga mos
-                  yuklarni real vaqtda topishlari mumkin. Ortiqcha qo'ng'iroqlar
-                  va kutishlarsiz.
+                  Drivers can find loads close to their location and suitable
+                  for their vehicle in real time. Without excessive calls and
+                  waiting.
                 </p>
               </div>
             </div>
@@ -53,12 +53,12 @@ const System = () => {
               </div>
               <div className="w-full sm:w-2/3 text-center sm:text-left">
                 <h3 className="text-xl sm:text-2xl font-semibold mb-2">
-                  Kerakli yuk mashinasini tez toping.
+                  Find the required truck quickly.
                 </h3>
                 <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
-                  Yuk egalari o'z yuklari uchun eng mos va eng arzon
-                  variantlarni bir necha daqiqada topishlari mumkin. Narx, shart
-                  va vaqtni taqqoslang.
+                  Cargo owners can find the most suitable and cheapest options
+                  for their shipments in just a few minutes. Compare prices,
+                  conditions, and time.
                 </p>
               </div>
             </div>
@@ -67,12 +67,11 @@ const System = () => {
           <div className="bg-[#0A1E2A] p-6 rounded-2xl shadow-lg flex flex-col justify-between">
             <div>
               <h3 className="text-xl sm:text-2xl font-semibold mb-3">
-                Xavfsiz va ishonchli foydalanuvchilar.
+                Safe and reliable users.
               </h3>
               <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
-                Fresh Line dagi har bir foydalanuvchi va transport vositasi
-                shaxsiy tekshiruvdan o'tadi. Siz faqat real va ishonchli
-                mijozlar bilan ishlaysiz.
+                Every user and vehicle at Fresh Line undergoes a personal
+                inspection. You only work with real and reliable clients.
               </p>
               <img
                 src={system4}
@@ -88,11 +87,11 @@ const System = () => {
             onClick={handleLoginClick}
             className="bg-[#46A358] text-white px-[52.5px] py-3 rounded-lg hover:bg-[#3d8b4d] transition text-lg"
           >
-            Tizimga kirish
+            Log in to the system
           </button>
           <button className="bg-gray-500 text-white px-6 py-3 rounded-lg flex items-center gap-2 hover:bg-gray-800 transition text-lg">
             <i className="fa-brands fa-apple text-xl"></i>
-            <span>Platformani yuklash</span>
+            <span>Load the platform</span>
           </button>
         </div>
       </div>

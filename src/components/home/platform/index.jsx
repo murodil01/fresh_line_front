@@ -9,48 +9,28 @@ import FreshLIneCard from "../../../assets/FResh Line/FreshLIneCard.jpg";
 
 const sections = [
   {
-    title: "Fermerlar uchun moslashtirilgan yetkazib berish yo'llari",
-    content: `
-      Aqlli yetkazib berish yo'llari: Fresh Line platformasi AI yordamida eng samarali, tez va xavfsiz yetkazib berish yo'llarini tanlab, mahsulotlarni bozorlarga o'z vaqtida yetkazishni ta’minlaydi.
-      
-      Hujjatlarni raqamlashtirish: Fresh Line orqali fermerlar hujjatlarni elektron ko'rinishda yuborishlari va qabul qilishlari mumkin — bu esa vaqtni tejaydi va ortiqcha byurokratiyani bartaraf etadi.
-    `,
+    title: "Delivery methods tailored for farmers",
+    content: `Smart delivery methods: The Fresh Line platform uses AI to select the most efficient, fast, and safe delivery routes, ensuring products reach markets on time. Digitizing documents: Through Fresh Line, farmers can send and receive documents electronically — saving time and eliminating unnecessary bureaucracy.`,
     image: fermers,
   },
   {
-    title:
-      "Sifatli mahsulot - To'g'ridan-to'g'ri fermerdan sizning oshxonangizgacha",
-    content: `
-    Fresh Line orqali HORECA sohasidagi hamkorlar eng yangi, mahalliy mahsulotlarni to'g'ridan-to'g'ri fermerlardan oladilar. 
-    
-    AI asosida optimallashtirilgan logistika tufayli sizga har doim tezkor, sovitilgan yetkazib berish kafolatlanadi.
-    `,
+    title: "Quality product - Directly from the farmer to your kitchen",
+    content: `Through Fresh Line, partners in the HORECA sector receive the newest local products directly from farmers. Thanks to AI-optimized logistics, fast, chilled delivery is always guaranteed for you.`,
     image: shef,
   },
   {
-    title: "O'zbekistonning o'z logistika tizimi",
-    content: `
-      Fresh Line — bu xorijiy yechim emas.
-      Bu O'zbekiston ichida yaratilgan, mahalliy yo'llar, iqlim va bozor sharoitlariga moslashtirilgan zamonaviy logistika tizimidir.
-      Bizning AI tizimimiz tumanlar, yo'llardagi yuklama va mikroiqlimni hisobga olib, mahsulotlar xavfsiz va tez yetkazilishini ta’minlaydi.
-      Yagona platforma — fermerdan to mijozgacha, o'zimizniki!
-    `,
+    title: "Uzbekistan's own logistics system",
+    content: `Fresh Line is not a foreign solution.It is a modern logistics system created within Uzbekistan, adapted to local roads, climate, and market conditions.Our AI system ensures safe and fast delivery of products by taking into account districts, road loads, and microclimate.A single platform — from the farmer to the customer, all our own!`,
     image: Car_FreshLine,
   },
   {
-    title: "Fresh Line eksport bilan birga",
-    content: `
-      Fresh Line eksport yo'llarini soddalashtiradi.
-      Bizning AI tizimimiz talab prognozlari va bojxona talablari asosida sizga eng foydali bozorlar va eng tez yetkazib berish yo'nalishlarini taklif qiladi.
-      Import uchun esa — Fresh Line ishonchli hamkor sifatida, xorijiy mahsulotlarni o'z vaqtida, zarur sertifikatlar bilan yetkazadi.
-    `,
+    title: "Fresh Line along with export",
+    content: `Fresh Line simplifies export routes. Our AI system suggests the most profitable markets and the fastest delivery routes based on demand forecasts and customs requirements. For import, Fresh Line, as a reliable partner, delivers foreign products on time with the necessary certificates.    `,
     image: ship,
   },
   {
-    title: "Xodimlarimiz uchun",
-    content: `
-    Biz bilan birga jamoada bo'ladiganlar uchun maxsus brending.
-    `,
+    title: "For our employees",
+    content: `Special branding for those who will be in the team with us.`,
     image: [
       { src: shirt, size: "large" },
       { src: FreshLIneCard, size: "small" },
@@ -95,7 +75,7 @@ const Platform = () => {
                       borderRadius: "7px",
                     }}
                   >
-                    Tizimga kirish
+                    Login to the system
                   </Button>
                 </div>
               </Col>

@@ -175,7 +175,7 @@ const Login = () => {
       .then((res) => {
         const token = res.data?.access;
         if (!token) {
-          toast.error("❌ Token topilmadi!");
+          toast.error("❌ Token not found!");
           return;
         }
 
@@ -184,7 +184,7 @@ const Login = () => {
         navigate("/dashboard");
       })
       .catch(() => {
-        toast.error("Login yoki parol xato ❌");
+        toast.error("Login or password is incorrect ❌");
       })
       .finally(() => setLoading(false));
   };
@@ -205,7 +205,7 @@ const Login = () => {
         <div className="w-full max-w-[400px] mx-auto">
           <h2 className="text-center text-[30px] font-semibold mb-6 mt-24 lg:mt-0">
             <span className="text-[#46A358] font-bold">Fresh Line</span>{" "}
-            tizimiga kirish
+            log in to the system
           </h2>
 
           <Form
@@ -218,13 +218,13 @@ const Login = () => {
               label={<span className="font-semibold">Username</span>}
               name="username"
               rules={[
-                { required: true, message: "Username kiriting!" },
-                { min: 3, message: "Kamida 3 ta harf kiriting!" },
+                { required: true, message: "Enter username!" },
+                { min: 3, message: "Enter at least 3 letters!" },
               ]}
             >
               <Input
                 prefix={<UserOutlined className="text-[#46A358]" />}
-                placeholder="Username kiriting"
+                placeholder="Enter username"
                 style={{
                   height: "45px",
                   borderRadius: "9px",
@@ -233,13 +233,13 @@ const Login = () => {
             </Form.Item>
 
             <Form.Item
-              label={<span className="font-semibold">Parol</span>}
+              label={<span className="font-semibold">Password</span>}
               name="password"
-              rules={[{ required: true, message: "Parolni kiriting!" }]}
+              rules={[{ required: true, message: "Enter the password!" }]}
             >
               <Input.Password
                 prefix={<LockOutlined className="text-[#46A358]" />}
-                placeholder="Parolni kiriting"
+                placeholder="Enter the password"
                 style={{
                   height: "45px",
                   borderRadius: "9px",
@@ -261,7 +261,7 @@ const Login = () => {
                   fontSize: "20px",
                 }}
               >
-                {loading ? <Loader className="animate-spin" /> : "Kirish"}
+                {loading ? <Loader className="animate-spin" /> : "Enter"}
               </Button>
             </Form.Item>
           </Form>

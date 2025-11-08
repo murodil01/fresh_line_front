@@ -13,11 +13,11 @@ const Hero = () => {
       <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[70px] font-bold text-gray-900 leading-tight">
         <AnimatedWords />
         <br />
-        ishini osonlashtiruvchi tizim
+        system that facilitates work
       </h1>
 
       <p className="mt-4 text-lg sm:text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
-        Fermerlar, Restoranlar, Kafelar, Mehmonxonalar — barchasi bitta tizimda
+        Farmers, Restaurants, Cafes, Hotels — all in one system
       </p>
 
       <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-8">
@@ -25,7 +25,7 @@ const Hero = () => {
           onClick={handleLoginClick}
           className="w-[280px] h-[60px] bg-[#46A358] hover:bg-[#4b8657] font-bold text-white text-lg sm:text-xl rounded-lg transition"
         >
-          Tizimga kirish
+          Log in to the system
         </button>
 
         <button className="w-[280px] h-[60px] flex items-center justify-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold text-lg sm:text-xl rounded-lg transition">
@@ -47,7 +47,7 @@ const Hero = () => {
           >
             <path d="M2.5 1C2.18 1.4 2 1.89 2 2.41v19.18c0 .52.18 1.1.5 1.41L14 12 2.5 1zM5.78.38C5.24.02 4.6-.08 4 .06L14.57 11 18 7.46 5.78.38zM14.57 13L4 23.94c.17.04.35.06.53.06.44 0 .88-.13 1.26-.38L18 16.54 14.57 13zM22.82 9.85L19.74 8 16 12l3.74 4 3.08-1.85C23.56 13.71 24 12.91 24 12s-.44-1.71-1.18-2.15z" />
           </svg>
-          Ilovani yuklash
+          Download the app
         </button>
       </div>
     </div>

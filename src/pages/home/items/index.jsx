@@ -14,7 +14,7 @@ const Items = () => {
         setProducts(res); 
       })
       .catch((err) => {
-        console.error("Mahsulotlarni olishda xatolik:", err);
+        console.error("Error in receiving products:", err);
       })
       .finally(() => setLoading(false));
   }, []);
@@ -27,7 +27,7 @@ const Items = () => {
         </div>
       ) : products.length === 0 ? (
         <div className="text-center text-red-500 font-medium py-8">
-          ❌ Mahsulotlar topilmadi!
+          ❌ No products found!
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">

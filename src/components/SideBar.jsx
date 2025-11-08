@@ -18,17 +18,17 @@ import logo2 from "../assets/logo2.png";
 
 const menuItems = [
   { key: "dashboard", icon: <UserPen />, label: "Profile", path: "/dashboard" },
-  { key: "statistic", icon: <ChartNoAxesCombined />, label: "Statistika", path: "/statistic" },
-  { key: "mahsulotlar", icon: <ShoppingCart />, label: "Mahsulotlar", path: "/mahsulotlar" },
-  { key: "logistic", icon: <Truck />, label: "Logistika kompaniylar", path: "/logistic" },
-  { key: "export", icon: <UsersRound />, label: "Expartyor", path: "/export" },
-  { key: "import", icon: <UserSearch />, label: "Impartyor", path: "/import" },
-  { key: "marcet", icon: <ShoppingBag />, label: "Market", path: "/marcet" },
+  { key: "statistic", icon: <ChartNoAxesCombined />, label: "Statistic", path: "/statistic" },
+  { key: "products", icon: <ShoppingCart />, label: "Products", path: "/products" },
+  { key: "logistic", icon: <Truck />, label: "Logistics companies", path: "/logistic" },
+  { key: "export", icon: <UsersRound />, label: "Export", path: "/export" },
+  { key: "import", icon: <UserSearch />, label: "Import", path: "/import" },
+  { key: "marcet", icon: <ShoppingBag />, label: "Marcet", path: "/marcet" },
 ];
 
 const otherItems = [
-  { key: "settings", icon: <Settings />, label: "Sozlamalar", path: "/settings" },
-  { key: "halp", icon: <HandHelping />, label: "Halp", path: "/halp" },
+  { key: "settings", icon: <Settings />, label: "Settings", path: "/settings" },
+  { key: "help", icon: <HandHelping />, label: "Help", path: "/help" },
 ];
 
 const SideBar = ({ onLogout, isMobileOpen, setIsMobileOpen }) => {

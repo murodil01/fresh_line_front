@@ -29,7 +29,7 @@ const Export = () => {
 
       <div className="w-full py-8">
         <h1 className="text-gray-500 font-semibold text-2xl mb-6 text-left">
-          Exportyorlar ro'yhati
+          List of exporters
         </h1>
 
         <div className="flex flex-col gap-4">
@@ -52,7 +52,7 @@ const Export = () => {
               </div>
 
               <button className="px-4 py-2 bg-[#46A358] text-white rounded hover:bg-[#3d8b4d] transition text-sm w-full sm:w-auto">
-                Batafsil
+                Detailed
               </button>
             </div>
           ))}

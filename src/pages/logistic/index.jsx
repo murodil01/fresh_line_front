@@ -26,9 +26,9 @@ const Logistic = () => {
     <div className="text-black min-h-screen">
 
       <div className="w-full py-8">
-        <h1 className="text-gray-700 font-semibold text-2xl mb-6 text-left">
-          Logistic kompaniyalar ro'yhati
-        </h1>
+        <h3 className="text-gray-700 font-semibold text-2xl mb-6 text-left">
+          List of logistics companies
+        </h3>
 
         <div className="flex flex-col gap-4">
           {companies.map((company) => (
@@ -48,7 +48,7 @@ const Logistic = () => {
               </div>
 
               <button className="px-4 py-2 bg-[#46A358] text-white rounded hover:bg-[#3d8b4d] transition text-sm w-full sm:w-auto">
-                Batafsil
+                Detailed
               </button>
             </div>
           ))}

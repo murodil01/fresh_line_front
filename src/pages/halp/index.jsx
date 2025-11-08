@@ -4,27 +4,27 @@ const Halp = () => {
   return (
     <div className="wull">
       <div className="bg-white shadow-md rounded-xl p-8 w-full">
-        <h1 className="text-3xl font-bold text-[#46A358] mb-6 border-b pb-2">
-          Yordam va qo'llab-quvvatlash
-        </h1>
+        <h3 className="text-3xl font-bold text-[#46A358] mb-6 border-b pb-2">
+          Help and support
+        </h3>
 
         <div className="space-y-6">
           <div>
             <h3 className="text-lg font-semibold text-gray-800">
-              1. Qanday qilib parolni o'zgartirishim mumkin?
+              1. How can I change my password?
             </h3>
             <p className="text-gray-600 mt-1">
-              Sozlamalar sahifasiga o'ting, yangi parolni kiriting va saqlash
-              tugmasini bosing.
+              Go to the settings page, enter the new password, and click the
+              save button.
             </p>
           </div>
 
           <div>
             <h3 className="text-lg font-semibold text-gray-800">
-              2. Mening hisobim bloklangan bo'lsa nima qilaman?
+              2. What should I do if my account is blocked?
             </h3>
             <p className="text-gray-600 mt-1">
-              Iltimos, bizning qo'llab-quvvatlash jamoamiz bilan bog'laning:{" "}
+              Please contact our support team:{" "}
               <a
                 href="mailto:support@example.com"
                 className="text-[#46A358] underline"
@@ -36,20 +36,19 @@ const Halp = () => {
 
           <div>
             <h3 className="text-lg font-semibold text-gray-800">
-              3. Saytdan qanday foydalanaman?
+              3. How do I use the website?
             </h3>
             <p className="text-gray-600 mt-1">
-              Har bir sahifada kerakli ma'lumotlar aniq ko'rsatilgan.
-              Shuningdek, siz "Sozlamalar" yoki "Profil" orqali o'zingizga
-              moslashtira olasiz.
+              Each page clearly shows the necessary information. Additionally,
+              you can customize it for yourself through "Settings" or "Profile".
             </p>
           </div>
 
           <div className="border-t pt-6">
             <h3 className="text-lg font-semibold text-gray-800 mb-2">
-              Qo'shimcha yordam kerakmi?
+              Do you need additional help?
             </h3>
-            <p className="text-gray-600">Biz bilan bog'laning:</p>
+            <p className="text-gray-600">Contact us:</p>
             <ul className="text-[#46A358] mt-2 space-y-1 list-disc list-inside">
               <li>
                 Email:{" "}

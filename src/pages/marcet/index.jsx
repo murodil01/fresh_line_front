@@ -5,9 +5,9 @@ const Marcet = () => {
   return (
     <div className="w-full">
       <div>
-        <h1 className="font-[500] text-gray-500 text-2xl">
-          Market kataloglari
-        </h1>
+        <h3 className="font-[500] text-gray-500 text-2xl">
+          Market catalogs
+        </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 my-5">
           {Array.from({ length: 8 }).map((_, i) => (
             <div
@@ -16,7 +16,7 @@ const Marcet = () => {
             >
               <Home className="text-[#46A358]" size={32} />
               <h3 className="text-lg font-semibold text-gray-800">
-                Bog' jihozlari
+                Garden equipment
               </h3>
             </div>
           ))}

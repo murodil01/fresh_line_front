@@ -22,7 +22,7 @@ const Mahsulotlar = () => {
     e.preventDefault();
     const { name, price, quantity, category } = form;
     if (!name || !price || !quantity || !category) {
-      alert("Barcha maydonlarni to‘ldiring");
+      alert("Fill in all the fields");
       return;
     }
 
@@ -41,7 +41,6 @@ const Mahsulotlar = () => {
 
   return (
     <div className="w-full text-black">
-
       <div className="py-8">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-bold text-[#46A358]">Mahsulotlar</h2>
@@ -49,7 +48,7 @@ const Mahsulotlar = () => {
             onClick={() => setModalOpen(true)}
             className="bg-[#46A358] hover:bg-[#3d8b4d] text-white px-5 py-2 rounded"
           >
-            + Mahsulot qo'shish
+            + Add product
           </button>
         </div>
 
@@ -64,7 +63,7 @@ const Mahsulotlar = () => {
               className="w-35 h-28 mx-auto"
             />
             <h3 className="text-center mt-2 font-semibold text-lg text-[#46A358]">
-              Meva mahsulotlari
+              Fruit products
             </h3>
           </div>
 
@@ -78,13 +77,13 @@ const Mahsulotlar = () => {
               className="w-35 h-30 mx-auto"
             />
             <h3 className="text-center mt-2 font-semibold text-lg text-[#46A358]">
-              Sabzavot mahsulotlari
+              Vegetable products
             </h3>
           </div>
         </div>
 
         {filtered.length === 0 ? (
-          <p className="text-gray-500">Mahsulot yo'q</p>
+          <p className="text-gray-500">Product not available</p>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {filtered.map((product) => (
@@ -95,10 +94,10 @@ const Mahsulotlar = () => {
                 <h3 className="text-lg font-semibold text-[#46A358] mb-1">
                   {product.name}
                 </h3>
-                <p className="text-gray-600">Narxi: {product.price} so‘m</p>
-                <p className="text-gray-600">Miqdori: {product.quantity}</p>
+                <p className="text-gray-600">Price: {product.price} so‘m</p>
+                <p className="text-gray-600">Amount: {product.quantity}</p>
                 <p className="text-gray-500 text-sm mt-1">
-                  Guruh:{" "}
+                  Group:{" "}
                   <span className="uppercase font-medium">
                     {product.category}
                   </span>
@@ -119,7 +118,7 @@ const Mahsulotlar = () => {
         className="!w-[370px]"
       >
         <h2 className="text-xl font-semibold mb-4 text-center text-[#46A358]">
-          Mahsulot qo'shish
+          + Add product
         </h2>
         <form onSubmit={addProduct} className="grid grid-cols-1 gap-4">
           <select
@@ -128,16 +127,16 @@ const Mahsulotlar = () => {
             onChange={handleChange}
             className="border px-3 py-2 rounded"
           >
-            <option value="">Guruhni tanlang</option>
-            <option value="meva">Meva</option>
-            <option value="sabzavot">Sabzavot</option>
+            <option value="">Select a group</option>
+            <option value="fruit">Fruit</option>
+            <option value="vegetable">Vegetable</option>
           </select>
           <input
             type="text"
             name="name"
             value={form.name}
             onChange={handleChange}
-            placeholder="Mahsulot nomi"
+            placeholder="Product name"
             className="border px-3 py-2 rounded"
           />
           <input
@@ -145,7 +144,7 @@ const Mahsulotlar = () => {
             name="price"
             value={form.price}
             onChange={handleChange}
-            placeholder="Narxi (so'm)"
+            placeholder="Price (so'm)"
             className="border px-3 py-2 rounded"
           />
           <input
@@ -153,14 +152,14 @@ const Mahsulotlar = () => {
             name="quantity"
             value={form.quantity}
             onChange={handleChange}
-            placeholder="Miqdori (kg/dona)"
+            placeholder="Amount (kg/piece)"
             className="border px-3 py-2 rounded"
           />
           <button
             type="submit"
             className="bg-[#46A358] text-white py-2 rounded hover:bg-[#3d8b4d]"
           >
-            Qo'shish
+            Add{" "}
           </button>
         </form>
       </Modal>

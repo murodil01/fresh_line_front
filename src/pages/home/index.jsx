@@ -7,7 +7,7 @@ import Pro from "./pro";
 import Users from "./users"; 
 
 const Home = () => {
-  const [activeTab, setActiveTab] = useState("mahsulotlar");
+  const [activeTab, setActiveTab] = useState("products");
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
 
   useEffect(() => {
@@ -29,11 +29,11 @@ const Home = () => {
 
   const renderContent = () => {
     switch (activeTab) {
-      case "mahsulotlar":
+      case "products":
         return <Items />;
-      case "ariza":
+      case "application":
         return <Application />;
-      case "sharxlar":
+      case "comments":
         return <Opinions />;
       case "pro":
         return <Pro />;
@@ -74,7 +74,7 @@ const Home = () => {
         <div className="w-full">
           <nav>
             <ul className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between p-4 bg-white shadow rounded-t-lg gap-2 sm:gap-0">
-              {["mahsulotlar", "ariza", "sharxlar", "pro"].map((tab) => (
+              {["products", "application", "comments", "pro"].map((tab) => (
                 <li
                   key={tab}
                   onClick={() => setActiveTab(tab)}

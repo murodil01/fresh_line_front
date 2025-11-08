@@ -9,9 +9,9 @@ const PrivateError = () => {
       <Navbar />
 
       <div className="flex-grow flex flex-col items-center justify-center text-center py-40 px-4">
-        <h1 className="text-6xl font-bold text-[#46A358] mb-4">404</h1>
+        <h3 className="text-6xl font-bold text-[#46A358] mb-4">404</h3>
         <p className="text-xl md:text-2xl font-medium mb-6">
-          Sahifa topilmadi yoki mavjud emas
+         Page not found or does not exist
         </p>
 
         <Link
@@ -19,7 +19,7 @@ const PrivateError = () => {
           className="inline-flex items-center gap-2 bg-[#46A358] text-white hover:bg-[#51965f] font-semibold py-2 px-6 rounded-xl transition-all duration-200"
         >
           <ArrowLeft className="w-5 h-5" />
-          Profile sahifasiga qaytish
+         Return to the profile page
         </Link>
       </div>
 
