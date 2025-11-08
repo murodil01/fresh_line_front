@@ -1,10 +1,137 @@
+// import { useState } from "react";
+// import { Navigate, useNavigate } from "react-router-dom";
+// import { Form, Input, Button } from "antd";
+// import { UserOutlined, LockOutlined } from "@ant-design/icons";
+// import { Loader } from "lucide-react";
+// import toast from "react-hot-toast";
+// import Fresh_login from "../../assets/FResh Line/Fresh_login.png"
+
+// // import logo1 from "../../assets/logo1.png";
+// import logom from "../../assets/logom.png";
+// import { usaAxios } from "../../hooks/useAxios";
+
+// const Login = () => {
+//   const axios = usaAxios();
+//   const navigate = useNavigate();
+//   const [loading, setLoading] = useState(false);
+
+//   const token = localStorage.getItem("token");
+
+//   if (token) {
+//     return <Navigate to="/dashboard" replace />;
+//   }
+
+//   const login = (e) => {
+//     setLoading(true);
+//     axios({ url: "api/users/login/", method: "POST", body: e })
+//       .then((data) => {
+//         const token = data.access;
+//         if (!token) {
+//           toast.error("❌ Token topilmadi!");
+//           return;
+//         }
+
+//         localStorage.setItem("token", token);
+//         toast.success("Welcome ✅");
+//         navigate("/dashboard");
+//       })
+//       .catch(() => {
+//         toast.error("Login yoki parol xato ❌");
+//       })
+//       .finally(() => setLoading(false));
+//   };
+
+//   return (
+//     <div className="flex flex-col lg:flex-row h-screen">
+//       <div className="hidden lg:flex w-1/2 bg-[#46A358] items-center justify-center">
+//         <img src={Fresh_login} alt="Logo" className="w-2/3" />
+//       </div>
+
+//       <div className="w-full lg:w-1/2 flex items-center justify-center px-4 min-h-screen relative">
+//         <img
+//           src={logom}
+//           alt="Mobile Logo"
+//           className="w-50 lg:hidden absolute top-15 left-1/2 -translate-x-1/2"
+//         />
+
+//         <div className="w-full max-w-[400px] mx-auto">
+//           <h2 className="text-center text-[30px] font-semibold mb-6 mt-24 lg:mt-0">
+//             <span className="text-[#46A358] font-bold">Fresh Line</span>{" "}
+//             tizimiga kirish
+//           </h2>
+
+//           <Form
+//             name="login"
+//             layout="vertical"
+//             onFinish={login}
+//             autoComplete="off"
+//           >
+//             <Form.Item
+//               label={<span className="font-semibold">Username</span>}
+//               name="username"
+//               rules={[
+//                 { required: true, message: "Username kiriting!" },
+//                 { min: 3, message: "Kamida 3 ta harf kiriting!" },
+//               ]}
+//             >
+//               <Input
+//                 prefix={<UserOutlined className="text-[#46A358]" />}
+//                 placeholder="Username kiriting"
+//                 style={{
+//                   height: "45px",
+//                   borderRadius: "9px",
+//                 }}
+//               />
+//             </Form.Item>
+
+//             <Form.Item
+//               label={<span className="font-semibold">Parol</span>}
+//               name="password"
+//               rules={[{ required: true, message: "Parolni kiriting!" }]}
+//             >
+//               <Input.Password
+//                 prefix={<LockOutlined className="text-[#46A358]" />}
+//                 placeholder="Parolni kiriting"
+//                 style={{
+//                   height: "45px",
+//                   borderRadius: "9px",
+//                 }}
+//               />
+//             </Form.Item>
+
+//             <Form.Item className="mt-4 h-[35px]">
+//               <Button
+//                 htmlType="submit"
+//                 type="primary"
+//                 style={{
+//                   backgroundColor: "#46A358",
+//                   borderColor: "#46A358",
+//                   color: "white",
+//                   width: "100%",
+//                   height: "45px",
+//                   borderRadius: "9px",
+//                   fontSize: "20px"
+//                 }}
+//               >
+//                 {loading ? <Loader className="animate-spin" /> : "Kirish"}
+//               </Button>
+//             </Form.Item>
+//           </Form>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Login;
+
 import { useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import { Form, Input, Button } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import { Loader } from "lucide-react";
 import toast from "react-hot-toast";
-import Fresh_login from "../../assets/FResh Line/Fresh_login.png"
+import Fresh_login from "../../assets/FResh Line/Fresh_login.png";
 
 // import logo1 from "../../assets/logo1.png";
 import logom from "../../assets/logom.png";
@@ -17,15 +144,36 @@ const Login = () => {
 
   const token = localStorage.getItem("token");
 
+  // Agar token mavjud bo‘lsa, to‘g‘ridan to‘g‘ri dashboardga yo‘naltiriladi
   if (token) {
     return <Navigate to="/dashboard" replace />;
   }
 
   const login = (e) => {
     setLoading(true);
-    axios({ url: "api/users/login/", method: "POST", body: e })
-      .then((data) => {
-        const token = data.access;
+
+    // 🚀 Fake API yoki test rejimi
+    const isFakeMode = true;
+
+    if (isFakeMode) {
+      setTimeout(() => {
+        const fakeToken = "fake_jwt_token_123456789";
+        localStorage.setItem("token", fakeToken);
+        toast.success("Welcome)");
+        navigate("/dashboard");
+        setLoading(false);
+      }, 1000);
+      return;
+    }
+
+    // 🔥 Real API (agar kerak bo‘lsa)
+    axios({
+      url: "api/users/login/",
+      method: "POST",
+      data: e, // <-- `body` emas, `data` bo‘lishi kerak
+    })
+      .then((res) => {
+        const token = res.data?.access;
         if (!token) {
           toast.error("❌ Token topilmadi!");
           return;
@@ -110,7 +258,7 @@ const Login = () => {
                   width: "100%",
                   height: "45px",
                   borderRadius: "9px",
-                  fontSize: "20px"
+                  fontSize: "20px",
                 }}
               >
                 {loading ? <Loader className="animate-spin" /> : "Kirish"}
