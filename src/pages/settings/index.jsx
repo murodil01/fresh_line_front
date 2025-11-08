@@ -15,7 +15,7 @@ const Settings = () => {
             </label>
             <input
               type="text"
-              placeholder="Your name"
+              placeholder="Enter your name"
               className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#46A358]"
             />
           </div>
@@ -26,7 +26,7 @@ const Settings = () => {
             </label>
             <input
               type="text"
-              placeholder="Your surname"
+              placeholder="Enter your surname"
               className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#46A358]"
             />
           </div>

@@ -159,7 +159,7 @@ const Login = () => {
       setTimeout(() => {
         const fakeToken = "fake_jwt_token_123456789";
         localStorage.setItem("token", fakeToken);
-        toast.success("Welcome)");
+        toast.success("Welcome");
         navigate("/dashboard");
         setLoading(false);
       }, 1000);
