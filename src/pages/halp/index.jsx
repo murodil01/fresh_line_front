@@ -60,7 +60,7 @@ const Halp = () => {
                   t.me/example
                 </a>
               </li>
-              <li>Telefon: +998 90 123 45 67</li>
+              <li>Phone: +998 90 123 45 67</li>
             </ul>
           </div>
         </div>

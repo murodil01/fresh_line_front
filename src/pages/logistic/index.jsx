@@ -27,7 +27,7 @@ const Logistic = () => {
 
       <div className="w-full py-8">
         <h3 className="text-gray-700 font-semibold text-2xl mb-6 text-left">
-          List of logistics companies
+          List of logistic companies
         </h3>
 
         <div className="flex flex-col gap-4">

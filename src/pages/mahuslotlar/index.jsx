@@ -43,7 +43,7 @@ const Mahsulotlar = () => {
     <div className="w-full text-black">
       <div className="py-8">
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-bold text-[#46A358]">Mahsulotlar</h2>
+          <h2 className="text-2xl font-bold text-[#46A358]">Products</h2>
           <button
             onClick={() => setModalOpen(true)}
             className="bg-[#46A358] hover:bg-[#3d8b4d] text-white px-5 py-2 rounded"

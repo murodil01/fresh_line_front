@@ -20,10 +20,10 @@ const menuItems = [
   { key: "dashboard", icon: <UserPen />, label: "Profile", path: "/dashboard" },
   { key: "statistic", icon: <ChartNoAxesCombined />, label: "Statistic", path: "/statistic" },
   { key: "products", icon: <ShoppingCart />, label: "Products", path: "/products" },
-  { key: "logistic", icon: <Truck />, label: "Logistics companies", path: "/logistic" },
+  { key: "logistic", icon: <Truck />, label: "Logistic companies", path: "/logistic" },
   { key: "export", icon: <UsersRound />, label: "Export", path: "/export" },
   { key: "import", icon: <UserSearch />, label: "Import", path: "/import" },
-  { key: "marcet", icon: <ShoppingBag />, label: "Marcet", path: "/marcet" },
+  { key: "marcet", icon: <ShoppingBag />, label: "Market", path: "/marcet" },
 ];
 
 const otherItems = [

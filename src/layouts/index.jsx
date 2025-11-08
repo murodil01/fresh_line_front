@@ -17,18 +17,18 @@ const MainLayout = () => {
   const handleLogout = () => {
     toast((t) => (
       <div className="p-4">
-        <p className="text-sm font-semibold mb-2">Tizimdan chiqmoqchimisiz?</p>
-        <div className="flex justify-end gap-2">
+        <p className="text-sm font-semibold mb-2">Do you want to log out?</p>
+        <div className="flex justify-center gap-2">
           <button
             onClick={() => toast.dismiss(t.id)}
             className="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300 text-sm"
           >
-            Bekor qilish
+            No
           </button>
           <button
             onClick={() => {
               toast.dismiss(t.id);
-              toast.success("Tizimdan chiqdingiz ✅", { duration: 1000 });
+              toast.success("You have logged out ✅", { duration: 1000 });
               closeModal();
               setTimeout(() => {
                 localStorage.removeItem("token");
@@ -37,7 +37,7 @@ const MainLayout = () => {
             }}
             className="px-3 py-1 bg-[#46A358] text-white rounded hover:bg-[#3d8b4d] text-sm"
           >
-            Ha, chiqish
+            Yes
           </button>
         </div>
       </div>
@@ -88,7 +88,7 @@ const MainLayout = () => {
           <div className="absolute right-4 top-20 md:top-16 bg-white border border-gray-200 rounded-lg shadow-md w-64 p-4 z-50">
             <div className="flex justify-between items-center mb-2">
               <h3 className="text-lg font-semibold text-[#46A358]">
-                Foydalanuvchi
+                User
               </h3>
               <X
                 className="w-5 h-5 text-gray-500 cursor-pointer hover:text-red-500"
@@ -96,14 +96,14 @@ const MainLayout = () => {
               />
             </div>
             <p>
-              <span className="font-medium text-gray-600">Ism:</span> Ali
+              <span className="font-medium text-gray-600">Name:</span> Ali
             </p>
             <p>
-              <span className="font-medium text-gray-600">Familiya:</span>{" "}
+              <span className="font-medium text-gray-600">Surname:</span>{" "}
               Karimov
             </p>
             <p>
-              <span className="font-medium text-gray-600">Rol:</span> Admin
+              <span className="font-medium text-gray-600">Role:</span> Admin
             </p>
             <button
               onClick={handleLogout}
