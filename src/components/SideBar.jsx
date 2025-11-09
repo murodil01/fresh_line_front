@@ -14,13 +14,28 @@ import {
 } from "lucide-react";
 import { IoClose } from "react-icons/io5";
 import { Link, useLocation } from "react-router-dom";
-import logo2 from "../assets/logo2.png";
+import Fresh_login from "../assets/FResh Line/Fresh_login.png";
 
 const menuItems = [
   { key: "dashboard", icon: <UserPen />, label: "Profile", path: "/dashboard" },
-  { key: "statistic", icon: <ChartNoAxesCombined />, label: "Statistic", path: "/statistic" },
-  { key: "products", icon: <ShoppingCart />, label: "Products", path: "/products" },
-  { key: "logistic", icon: <Truck />, label: "Logistic companies", path: "/logistic" },
+  {
+    key: "statistic",
+    icon: <ChartNoAxesCombined />,
+    label: "Statistic",
+    path: "/statistic",
+  },
+  {
+    key: "products",
+    icon: <ShoppingCart />,
+    label: "Products",
+    path: "/products",
+  },
+  {
+    key: "logistic",
+    icon: <Truck />,
+    label: "Logistic companies",
+    path: "/logistic",
+  },
   { key: "export", icon: <UsersRound />, label: "Export", path: "/export" },
   { key: "import", icon: <UserSearch />, label: "Import", path: "/import" },
   { key: "marcet", icon: <ShoppingBag />, label: "Market", path: "/marcet" },
@@ -48,7 +63,11 @@ const SideBar = ({ onLogout, isMobileOpen, setIsMobileOpen }) => {
       key,
       icon,
       label: (
-        <Link to={path} onClick={() => setIsMobileOpen(false)} className="text-white">
+        <Link
+          to={path}
+          onClick={() => setIsMobileOpen(false)}
+          className="text-white"
+        >
           {label}
         </Link>
       ),
@@ -57,25 +76,40 @@ const SideBar = ({ onLogout, isMobileOpen, setIsMobileOpen }) => {
   return (
     <>
       <div className="hidden md:flex flex-col w-64 min-h-screen h-[100%] bg-[#00AE4B] text-white px-6 pt-6">
-        <img src={logo2} alt="Logo" className="w-40 h-auto mb-8" />
+        <img
+          src={Fresh_login}
+          alt="Logo"
+          className="w-40 h-auto mb-8 mx-auto"
+        />
         <Menu
           mode="inline"
           selectedKeys={[selectedKey]}
-          style={{ backgroundColor: "transparent", border: "none", color: "white" }}
+          style={{
+            backgroundColor: "transparent",
+            border: "none",
+            color: "white",
+          }}
           items={renderMenu(menuItems)}
         />
         <div className="mt-8">
           <Menu
             mode="inline"
             selectedKeys={[selectedKey]}
-            style={{ backgroundColor: "transparent", border: "none", color: "white" }}
+            style={{
+              backgroundColor: "transparent",
+              border: "none",
+              color: "white",
+            }}
             items={[
               ...renderMenu(otherItems),
               {
                 key: "logout",
                 icon: <LogoutOutlined />,
                 label: (
-                  <button onClick={onLogout} className="text-white bg-transparent w-full text-left">
+                  <button
+                    onClick={onLogout}
+                    className="text-white bg-transparent w-full text-left"
+                  >
                     Logout
                   </button>
                 ),
@@ -101,14 +135,22 @@ const SideBar = ({ onLogout, isMobileOpen, setIsMobileOpen }) => {
           <Menu
             mode="inline"
             selectedKeys={[selectedKey]}
-            style={{ backgroundColor: "transparent", border: "none", color: "white" }}
+            style={{
+              backgroundColor: "transparent",
+              border: "none",
+              color: "white",
+            }}
             items={renderMenu(menuItems)}
           />
           <div className="mt-8">
             <Menu
               mode="inline"
               selectedKeys={[selectedKey]}
-              style={{ backgroundColor: "transparent", border: "none", color: "white" }}
+              style={{
+                backgroundColor: "transparent",
+                border: "none",
+                color: "white",
+              }}
               items={[
                 ...renderMenu(otherItems),
                 {
@@ -149,6 +191,3 @@ const SideBar = ({ onLogout, isMobileOpen, setIsMobileOpen }) => {
 };
 
 export default SideBar;
-
-
-
