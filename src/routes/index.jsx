@@ -14,9 +14,10 @@ import Settings from "../pages/settings";
 import Import from "../pages/import";
 
 import PrivateRoute from "../components/private-route";
-import GuestRoute from "../components/GuestRoute"; 
+import GuestRoute from "../components/GuestRoute";
 import HomeComponent from "../components/home";
 import PrivateError from "../pages/private-error";
+import VideoPage from "../pages/video-page";
 
 export const router = createBrowserRouter([
   {
@@ -25,13 +26,17 @@ export const router = createBrowserRouter([
   },
 
   {
-    element: <GuestRoute />, 
+    element: <GuestRoute />,
     children: [
       {
         path: "/login",
         element: <Login />,
       },
     ],
+  },
+  {
+    path: "/video",
+    element: <VideoPage />,
   },
 
   {
